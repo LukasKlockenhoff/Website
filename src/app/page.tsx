@@ -1,5 +1,4 @@
 import Image from "next/image";
-import TextStyles from "@/utils/textstyles";
 import { twMerge } from "tailwind-merge";
 import LandingPageImage from "@/assets/LandingPageImage.png";
 
@@ -8,7 +7,7 @@ export default function Home() {
     <div className={"w-full h-full bg-background"}>
       <div
         className={
-          "flex flex-col w-[80%] sm:w-full mx-auto gap-y-4 sm:ml-24 pt-14 sm:pt-24 overflow-hidden"
+          "flex flex-col w-[80%] sm:w-auto mx-auto gap-y-4 sm:ml-24 pt-14 sm:pt-24 overflow-hidden"
         }
       >
         <Image

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Michroma } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
-import Textstyles from "@/utils/textstyles";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const michroma = Michroma({
   weight: ["400"],
@@ -29,9 +29,16 @@ export default function RootLayout({
       className={twMerge("h-full w-full overflow-y-scroll", michroma.className)}
     >
       <body className={"h-full w-full"}>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

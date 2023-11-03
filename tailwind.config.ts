@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "#FFFAF0",
+        border: "#FFFAF0/90",
         white: "#FFFAF0",
         input: "hsl(var(--input))",
         ring: "#E86100",
@@ -54,9 +54,23 @@ module.exports = {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        none: "0px",
+        sm: "0.125rem",
+        DEFAULT: "0.25rem",
+        md: "0.375rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        "2xl": "1rem",
+        "3xl": "1.5rem",
+        full: "9999px",
+      },
+      borderWidth: {
+        DEFAULT: "1px",
+        "1/2": "0.5px",
+        0: "0px",
+        2: "2px",
+        4: "4px",
+        8: "8px",
       },
       keyframes: {
         "accordion-down": {

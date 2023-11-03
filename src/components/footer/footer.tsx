@@ -45,7 +45,7 @@ const links = [
 
 export default async function Footer() {
   return (
-    <div className="flex w-full flex-col md:flex-row items-center mx-auto h-[100px] md:justify-between px-24 bg-background justify-end">
+    <div className="flex w-full flex-col md:flex-row items-center mx-auto h-[100px] md:justify-between px-24 bg-background justify-end pb-10 sm:pb-0">
       <div className={"xl:flex hidden"}>
         <a href={"/"} className={TextStyles.H3}>
           Lukas Klockenhoff
