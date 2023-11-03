@@ -28,7 +28,7 @@ export default function RootLayout({
       lang="en"
       className={twMerge("h-full w-full overflow-y-scroll", michroma.className)}
     >
-      <body className={twMerge(Textstyles.Text, "h-full w-full")}>
+      <body className={"h-full w-full"}>
         <Header />
         {children}
         <Footer />

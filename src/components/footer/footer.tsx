@@ -45,20 +45,20 @@ const links = [
 
 export default async function Footer() {
   return (
-    <div className="flex w-full items-center mx-auto h-[100px] justify-between absolute bottom-0 px-24">
-      <div className={"flex"}>
+    <div className="flex w-full flex-col md:flex-row items-center mx-auto h-[100px] md:justify-between px-24 bg-background justify-end">
+      <div className={"xl:flex hidden"}>
         <a href={"/"} className={TextStyles.H3}>
           Lukas Klockenhoff
         </a>
       </div>
-      <div className={"flex gap-10"}>
+      <div className={"flex gap-x-10"}>
         {socials.map((social) => (
           <Link href={social.url} key={social.name}>
             <Icon name={social.icon} />
           </Link>
         ))}
       </div>
-      <div className={"flex gap-20"}>
+      <div className={"flex justify-evenly md:gap-x-20"}>
         {links.map((link) => (
           <Button asChild variant={"link"} key={link.name}>
             <Link href={link.url} key={link.name}>

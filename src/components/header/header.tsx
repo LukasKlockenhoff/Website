@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
-    <div className={"flex w-full bg-black h-[100px] items-center fixed"}>
+    <div className={"flex w-full bg-black h-[100px] items-center relative"}>
       <div className={"absolute pl-10 hidden sm:flex"}>
         <a href={"/"} className={Textstyles.H2}>
           Lukas K.
