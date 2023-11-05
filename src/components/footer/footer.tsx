@@ -3,6 +3,7 @@ import Icon, { IconName } from "@/components/ui/icon";
 import TextStyles from "@/utils/textstyles";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import theme from "tailwindcss/defaultTheme";
 
 interface socialIconProps {
   name: string;
@@ -45,7 +46,7 @@ const links = [
 
 export default async function Footer() {
   return (
-    <div className="flex w-full flex-col md:flex-row items-center mx-auto h-[100px] md:justify-between px-24 bg-background justify-end pb-10 sm:pb-0">
+    <div className="flex w-full flex-col md:flex-row items-center mx-auto h-[100px] md:justify-between px-24 bg-white dark:bg-background justify-end pb-10 sm:pb-0">
       <div className={"xl:flex hidden"}>
         <a href={"/"} className={TextStyles.H3}>
           Lukas Klockenhoff
@@ -54,7 +55,8 @@ export default async function Footer() {
       <div className={"flex gap-x-10"}>
         {socials.map((social) => (
           <Link href={social.url} key={social.name}>
-            <Icon name={social.icon} />
+            <Icon name={social.icon} fill={"white"} className={"hidden dark:block"}/>
+            <Icon name={social.icon} fill={"black"} className={"block dark:hidden"}/>
           </Link>
         ))}
       </div>

@@ -13,7 +13,7 @@ function MobileHeader() {
     <div className="flex top-16 text-right border-1 border-border">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black/20 px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black px-4 py-2 text-sm font-medium text-white hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
             <Icon name={"menu"} />
           </Menu.Button>
         </div>
@@ -26,11 +26,11 @@ function MobileHeader() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-0 mt-2 w-28 origin-top-right divide-y divide-gray-100 rounded-md bg-background shadow-lg ring-1 ring-black/5 focus:outline-none border-1">
-            <div className="px-1 py-1 flex flex-col items-start border w-44 rounded-lg">
+          <Menu.Items className="absolute right-0 mt-2 w-44 origin-top-right divide-y divide-gray-100 rounded-md bg-white dark:bg-background shadow-lg ring-1 ring-black/5 focus:outline-none border-1 border-border">
+            <div className="px-1 py-1 flex flex-col items-start w-full rounded-lg">
               <Menu.Item>
                 <Button asChild variant={"link"}>
-                  <Link href={"/cv"}>CV</Link>
+                  <Link href={"/about"} className={"text-black dark:text-white"}>About</Link>
                 </Button>
               </Menu.Item>
               <Menu.Item>
@@ -53,7 +53,7 @@ function MobileHeader() {
 
 export default function Header() {
   return (
-    <div className={"w-full bg-background"}>
+    <div className={"w-full dark:bg-background bg-white"}>
       <div className={"flex h-[100px] items-center mx-10"}>
         <div className={"hidden sm:flex w-1/3"}>
           <a href={"/"} className={Textstyles.H2}>

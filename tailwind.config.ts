@@ -17,25 +17,20 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "#FFFAF0/90",
+        border: "#FFFAF0/50",
         white: "#FFFAF0",
         input: "hsl(var(--input))",
         ring: "#E86100",
         background: "#1B1B1B",
         black: "#1B1B1B",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
+        primary: "#007FFF",
+        grey: "#A6A6A6",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
+        destructive: "#C51E3A",
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -109,6 +104,9 @@ module.exports = {
         "nwse-resize": "nwse-resize",
         "zoom-in": "zoom-in",
         "zoom-out": "zoom-out",
+      },
+      screens: {
+        "md-plus": { max: "767px" },
       },
       keyframes: {
         "accordion-down": {

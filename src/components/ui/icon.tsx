@@ -2,6 +2,7 @@ import React, { SVGProps } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface SvgProps {
+    fill?: string;
   className?: string;
 }
 
@@ -597,7 +598,7 @@ const Icons = {
   linkedin: (props: SvgProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="white"
+      fill={props.fill || "white"}
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -617,7 +618,7 @@ const Icons = {
     >
       <path
         d="M17.3263 0.903931H20.6998L13.3297 9.32742L22 20.7899H15.2112L9.89404 13.838L3.80995 20.7899H0.434432L8.31743 11.78L0 0.903931H6.96111L11.7674 7.25826L17.3263 0.903931ZM16.1423 18.7707H18.0116L5.94539 2.81706H3.93946L16.1423 18.7707Z"
-        fill="white"
+        fill={props.fill || "white"}
       />
     </svg>
   ),
@@ -625,7 +626,7 @@ const Icons = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
-      fill="white"
+      fill={props.fill || "white"}
       height="24"
       viewBox="0 0 24 24"
       {...props}
@@ -643,6 +644,7 @@ export type IconName = keyof typeof Icons;
 
 export interface IconProps {
   name: IconName;
+  fill?: string;
   className?: string;
 }
 

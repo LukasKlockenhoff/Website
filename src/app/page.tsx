@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import LandingPageImage from "@/assets/LandingPageImage.png";
+import Textstyles from "@/utils/textstyles";
 
 export default function Home() {
   return (
-    <div className={"w-full h-full bg-background"}>
+    <div className={"w-full h-full dark:bg-background bg-white"}>
       <div
         className={
           "flex flex-col w-[80%] sm:w-auto mx-auto gap-y-4 sm:ml-24 pt-14 sm:pt-24 overflow-hidden"
@@ -23,17 +24,17 @@ export default function Home() {
         >
           <h1
             className={twMerge(
-              "flex font-michroma text-2xl sm:text-4xl text-white",
+              Textstyles.H2,
             )}
           >
             Hi, I am Lukas Klockenhoff 👋
           </h1>
-          <p>
+          <p className={twMerge(Textstyles.BigText)}>
             I am a Computer Science Student in Tesla’s Future Talents Program I
             like programming things, playing the violin and piano, reading
             philosophy and travelling with my Girlfriend.
           </p>
-          <p>Welcome to my Page.</p>
+          <p className={twMerge(Textstyles.BigText)}>Welcome to my Page.</p>
         </div>
       </div>
     </div>
