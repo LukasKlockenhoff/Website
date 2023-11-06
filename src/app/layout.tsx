@@ -26,9 +26,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={twMerge("h-full w-full", michroma.className)}
+      className={twMerge("h-full w-full overflow-y-scroll", michroma.className)}
     >
-      <body className={"h-full w-full"}>
+      <body className={"h-full w-full bg-white dark:bg-background"}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

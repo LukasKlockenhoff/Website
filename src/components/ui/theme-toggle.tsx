@@ -24,7 +24,12 @@ export function ModeToggle() {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className={"dark:bg-background bg-white border text-black dark:text-white"}>
+      <DropdownMenuContent
+        align="end"
+        className={
+          "dark:bg-background bg-white border text-black dark:text-white"
+        }
+      >
         <DropdownMenuItem
           onClick={() => setTheme("light")}
           className={"hover:cursor-pointer"}

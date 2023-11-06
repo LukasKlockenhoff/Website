@@ -1,8 +1,8 @@
-import React, { SVGProps } from "react";
+import React from "react";
 import { twMerge } from "tailwind-merge";
 
 interface SvgProps {
-    fill?: string;
+  fill?: string;
   className?: string;
 }
 

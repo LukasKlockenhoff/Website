@@ -30,17 +30,17 @@ function MobileHeader() {
             <div className="px-1 py-1 flex flex-col items-start w-full rounded-lg">
               <Menu.Item>
                 <Button asChild variant={"link"}>
-                  <Link href={"/about"} className={"text-black dark:text-white"}>About</Link>
+                  <Link
+                    href={"/about"}
+                    className={"text-black dark:text-white"}
+                  >
+                    About
+                  </Link>
                 </Button>
               </Menu.Item>
               <Menu.Item>
                 <Button asChild variant={"link"}>
                   <Link href={"/projects"}>Projects</Link>
-                </Button>
-              </Menu.Item>
-              <Menu.Item>
-                <Button asChild variant={"link"}>
-                  <Link href={"/contact"}>Contact</Link>
                 </Button>
               </Menu.Item>
             </div>
@@ -55,12 +55,12 @@ export default function Header() {
   return (
     <div className={"w-full dark:bg-background bg-white"}>
       <div className={"flex h-[100px] items-center mx-10"}>
-        <div className={"hidden sm:flex w-1/3"}>
+        <div className={"hidden md:flex w-1/3"}>
           <a href={"/"} className={Textstyles.H2}>
             Lukas K.
           </a>
         </div>
-        <div className={"flex sm:hidden w-1/2"}>
+        <div className={"flex md:hidden w-1/2"}>
           <a href={"/"} className={Textstyles.H2}>
             LK.
           </a>

@@ -3,7 +3,6 @@ import Icon, { IconName } from "@/components/ui/icon";
 import TextStyles from "@/utils/textstyles";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import theme from "tailwindcss/defaultTheme";
 
 interface socialIconProps {
   name: string;
@@ -32,7 +31,7 @@ const socials: socialIconProps[] = [
 const links = [
   {
     name: "Contact",
-    url: "/contact",
+    url: "mailto:lukasklockenhoff@icloud.com",
   },
   {
     name: "Privacy Policy",
@@ -55,8 +54,16 @@ export default async function Footer() {
       <div className={"flex gap-x-10"}>
         {socials.map((social) => (
           <Link href={social.url} key={social.name}>
-            <Icon name={social.icon} fill={"white"} className={"hidden dark:block"}/>
-            <Icon name={social.icon} fill={"black"} className={"block dark:hidden"}/>
+            <Icon
+              name={social.icon}
+              fill={"white"}
+              className={"hidden dark:block"}
+            />
+            <Icon
+              name={social.icon}
+              fill={"black"}
+              className={"block dark:hidden"}
+            />
           </Link>
         ))}
       </div>

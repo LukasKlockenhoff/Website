@@ -22,11 +22,7 @@ export default function Home() {
             "flex flex-col justify-center font-michroma text-base sm:text-md md:w-2/5 gap-y-5"
           }
         >
-          <h1
-            className={twMerge(
-              Textstyles.H2,
-            )}
-          >
+          <h1 className={twMerge(Textstyles.H2)}>
             Hi, I am Lukas Klockenhoff 👋
           </h1>
           <p className={twMerge(Textstyles.BigText)}>
