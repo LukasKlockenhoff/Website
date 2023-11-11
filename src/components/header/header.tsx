@@ -3,18 +3,18 @@ import Textstyles from "@/utils/textstyles";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/theme-toggle";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import Icon from "@/components/ui/icon";
 
 function MobileHeader() {
   return (
     <div className="flex top-16 text-right border-1 border-border">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black px-4 py-2 text-sm font-medium text-white hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
-            <Icon name={"menu"} />
+          <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-white border-border focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+            <MenuIcon className={"dark:text-white text-black"} />
           </Menu.Button>
         </div>
         <Transition

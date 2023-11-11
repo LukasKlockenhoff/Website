@@ -16,20 +16,22 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
+      },
       colors: {
-        border: "#3B3C36/100",
-        white: "#FFFAF0",
+        border: "#3B3C36",
+        white: "#FDFDFD",
         input: "hsl(var(--input))",
         ring: "#E86100",
         background: "#1B1B1B",
         black: "#1B1B1B",
         foreground: "hsl(var(--foreground))",
         primary: "#007FFF",
-        grey: "#A6A6A6",
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
+        darkgrey: "#3B3C36",
+        grey: "#C0C0C0",
+        secondary: "#00C896",
         destructive: "#C51E3A",
         muted: {
           DEFAULT: "hsl(var(--muted))",

@@ -1,54 +1,36 @@
 "use client";
 
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
+
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" className={"rounded-full"}>
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent
-        align="end"
-        className={
-          "dark:bg-background bg-white border text-black dark:text-white"
-        }
+    <div className={"hover:cursor-pointer flex"}>
+      <Button
+        variant="outline"
+        size="icon"
+        className={"rounded-full dark:hidden block text-secondary"}
+        onClick={() => setTheme("dark")}
       >
-        <DropdownMenuItem
-          onClick={() => setTheme("light")}
-          className={"hover:cursor-pointer"}
-        >
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => setTheme("dark")}
-          className={"hover:cursor-pointer"}
-        >
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => setTheme("system")}
-          className={"hover:cursor-pointer"}
-        >
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+        <LightModeIcon />
+      </Button>
+      <Button
+        variant="outline"
+        size="icon"
+        className={
+          "rounded-full hidden dark:block hover:text-black text-border"
+        }
+        onClick={() => setTheme("light")}
+      >
+        <DarkModeIcon />
+      </Button>
+    </div>
   );
 }

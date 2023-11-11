@@ -2,15 +2,11 @@ import TextStyles from "@/utils/textstyles";
 import Textstyles from "@/utils/textstyles";
 import { twMerge } from "tailwind-merge";
 
-export default async function PrivacyPolicy() {
+export default async function Legal() {
   return (
-    <div
-      className={
-        "w-full h-full flex justify-center dark:bg-background bg-white"
-      }
-    >
-      <div className="flex dark:bg-background bg-white p-4 md:p-8 w-3/5 mx-auto">
-        <div className="max-w-screen-lg mx-auto">
+    <div className={"w-full h-full dark:bg-background bg-white"}>
+      <div className="flex h-full dark:bg-background bg-white p-4 md:p-8 sm:w-3/5 w-full  mx-auto justify-center">
+        <div className="flex flex-col mx-auto">
           <h2 className={twMerge(Textstyles.H2, "text-center")}>Imprint</h2>
           <div className="pt-8">
             <p className={TextStyles.BigText}>

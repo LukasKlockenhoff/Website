@@ -36,7 +36,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <main className="grid min-h-full w-full pb-20 bg-white dark:bg-background">
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
