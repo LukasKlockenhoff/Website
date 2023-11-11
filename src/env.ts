@@ -5,6 +5,7 @@ export const env = createEnv({
   server: {
     DB_CONNECTION_STRING: z.string().startsWith("postgres://"),
     DB_PUBLIC_KEY: z.string(),
+    SUPABASE_PUBLIC_URL: z.string(),
   },
   client: {
     NEXT_PUBLIC_SITE_URL: z.string(),
