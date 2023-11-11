@@ -6,7 +6,12 @@ export const env = createEnv({
     DB_CONNECTION_STRING: z.string().startsWith("postgres://"),
     DB_PUBLIC_KEY: z.string(),
   },
-  experimental__runtimeEnv: {},
+  client: {
+    NEXT_PUBLIC_SITE_URL: z.string(),
+  },
+  experimental__runtimeEnv: {
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
+  },
 });
 
 export default env;
