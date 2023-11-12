@@ -12,7 +12,11 @@ export default async function Projects() {
   });
 
   return (
-    <div className={"w-full h-full justify-center dark:bg-background bg-white"}>
+    <div
+      className={
+        "w-full h-full justify-center dark:bg-background bg-white overflow-clip"
+      }
+    >
       <h1 className={twMerge(TextStyles.H3, "flex justify-center")}>
         Projects
       </h1>
