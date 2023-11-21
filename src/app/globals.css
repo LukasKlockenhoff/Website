@@ -9,10 +9,11 @@
 }
 
 ::-moz-selection {
-  background: #e86100;
+  background: #1B1B1B;
 }
 ::selection {
-  background: #e86100;
+  background: #1B1B1B;
+  color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {

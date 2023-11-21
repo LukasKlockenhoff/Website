@@ -14,10 +14,10 @@ export default async function Projects() {
   return (
     <div
       className={
-        "w-full h-full justify-center dark:bg-background bg-white overflow-clip"
+        "w-full h-full justify-center dark:bg-background bg-white"
       }
     >
-      <h1 className={twMerge(TextStyles.H3, "flex justify-center")}>
+      <h1 className={twMerge(TextStyles.H1Gradient, "flex justify-center bg-clip-text bg-gradient-to-r from-emerald-600 via-emerald-300 to-emerald-100")}>
         Projects
       </h1>
       <div

@@ -7,6 +7,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
+import Icon from "@/components/ui/icon";
+import {twMerge} from "tailwind-merge";
+import textstyles from "@/utils/textstyles";
 
 function MobileHeader() {
   return (
@@ -56,7 +59,7 @@ export default function Header() {
     <div className={"w-full dark:bg-background bg-white"}>
       <div className={"flex h-[100px] items-center mx-10"}>
         <div className={"hidden md:flex w-1/3"}>
-          <a href={"/"} className={Textstyles.H2}>
+          <a href={"/"} className={twMerge(textstyles.H4, "font-bold")}>
             Lukas K.
           </a>
         </div>
@@ -68,10 +71,10 @@ export default function Header() {
         <div className={"w-1/3 justify-center hidden md:flex"}>
           <div className={"flex w-2/3"}>
             <Button asChild variant={"link"} className={"w-1/2"}>
-              <Link href={"/about"}>About</Link>
+              <Link href={"/about"}><p className={Textstyles.BigText}>About</p></Link>
             </Button>
             <Button asChild variant={"link"} className={"w-1/2"}>
-              <Link href={"/projects"}>Projects</Link>
+              <Link href={"/projects"}><p className={Textstyles.BigText}>Projects</p></Link>
             </Button>
           </div>
         </div>

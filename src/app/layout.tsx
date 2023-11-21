@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Michroma } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import Header from "@/components/header/header";
@@ -11,6 +12,13 @@ const michroma = Michroma({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-michroma",
+});
+
+const inter = Inter({
+  weight: ["400", "500", "600", "700", "900"],
+  subsets: ["latin-ext"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={twMerge("h-full w-full overflow-y-scroll", michroma.className)}
+      className={twMerge("h-full w-full overflow-y-scroll", inter.variable)}
     >
       <body className={"h-full w-full bg-white dark:bg-background"}>
         <ThemeProvider

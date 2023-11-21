@@ -78,7 +78,7 @@ export default async function ProjectCard({
       <div className={"relative flex flex-col w-[90%] pt-2"}>
         <div
           className={twMerge(
-            textstyles.H3,
+            textstyles.H4,
             "underline-offset-2 hover:underline",
           )}
         >
