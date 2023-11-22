@@ -56,7 +56,7 @@ function MobileHeader() {
 
 export default function Header() {
   return (
-    <div className={"w-full dark:bg-background bg-white"}>
+    <div className={"w-full dark:bg-background bg-white mx-auto"}>
       <div className={"flex h-[100px] items-center mx-10"}>
         <div className={"hidden md:flex w-1/3"}>
           <a href={"/"} className={twMerge(textstyles.H4, "font-bold")}>
