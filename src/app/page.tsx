@@ -17,13 +17,13 @@ const Socials = () => {
     return (
         <div className={"flex w-full gap-x-20 mx-auto justify-center m-10"}>
             <Link href={"https://www.github.com/lukasklockenhoff"}>
-                <GitHubIcon className={"w-8 h-8 sm:w-10 sm:h-10 text-black dark:text-white"}/>
+                <GitHubIcon className={"w-10 h-10 text-black dark:text-white"}/>
             </Link>
             <Link href={"https://www.x.com/lukasklff"}>
-                <TwitterIcon className={"w-8 h-8 sm:w-10 sm:h-10 text-black dark:text-white"}/>
+                <TwitterIcon className={"w-10 h-10 text-black dark:text-white"}/>
             </Link>
             <Link href={"https://www.linkedin.com/in/lukas-klockenhoff-334700244"}>
-                <LinkedInIcon className={"w-8 h-8 sm:w-10 sm:h-10 text-black dark:text-white"}/>
+                <LinkedInIcon className={"w-10 h-10 text-black dark:text-white"}/>
             </Link>
         </div>
     );
