@@ -31,7 +31,9 @@ const Socials = () => {
 
 export default function Home() {
   return (
-    <div className={"w-full h-full bg-white dark:bg-background"}>
+    <div
+      className={"w-full h-full bg-white dark:bg-background overflow-x-clip"}
+    >
       <div
         className={
           "flex flex-col w-[90%] sm:w-2/3 mx-auto gap-y-4 justify-center pt-14 overflow-hidden"
