@@ -23,14 +23,14 @@ const ProjectImageSuspense = () => {
 };
 
 export default async function ProjectCard({
-  project: { title, description, date, slug },
+  project: { title, description, date, slug, link, github },
 }: ProjectCardProps) {
   const ReadMore = ({ className }: ReadMoreProps) => {
     return (
       <div className={className}>
         <Button variant={"link"} asChild>
           <Link
-            href={`/projects/${slug}`}
+            href={github}
             className={twMerge(
               Textstyles.SmallText,
               "!text-secondary !items-center flex !p-0",
@@ -79,10 +79,10 @@ export default async function ProjectCard({
         <div
           className={twMerge(
             textstyles.H4,
-            "underline-offset-2 hover:underline",
+            "underline-offset-2 hover:underline mb-2",
           )}
         >
-          <Link href={`https://${title}`}>{title}</Link>
+          <Link href={link}>{title}</Link>
         </div>
         <div
           className={twMerge(

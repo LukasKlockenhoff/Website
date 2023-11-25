@@ -4,7 +4,8 @@ import { InferInsertModel, InferSelectModel } from "drizzle-orm";
 export const projects = pgTable("projects", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
-  
+  link: text("link").notNull(),
+  github: text("github").notNull(),
   slug: text("slug").notNull(),
   date: text("date").notNull(),
   description: text("description").notNull(),

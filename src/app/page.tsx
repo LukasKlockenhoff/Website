@@ -31,10 +31,10 @@ const Socials = () => {
 
 export default function Home() {
     return (
-        <div className={"w-full h-full dark:bg-background bg-white"}>
+        <div className={"w-full h-full bg-white dark:bg-background"}>
             <div
                 className={
-                    "flex flex-col mx-auto w-[90%] sm:w-2/3 items-start gap-y-4 sm:ml-24 pt-14 sm:pt-24 overflow-hidden"
+                    "flex flex-col w-[90%] sm:w-2/3 mx-auto gap-y-4 justify-center pt-14 overflow-hidden"
                 }
             >
                 <Image
@@ -42,6 +42,7 @@ export default function Home() {
                     alt={""}
                     width={"200"}
                     className={"pb-10 sm:mx-0"}
+                    draggable={false}
                 />
                 <div
                     className={
@@ -56,7 +57,7 @@ export default function Home() {
                     </h1>
                 </div>
             </div>
-            <div className={"flex w-full gap-x-20 mx-auto justify-center m-10"}>
+            <div className={"flex w-full gap-x-20 mx-auto justify-center m-0  sm:m-10"}>
                 <Socials />
             </div>
         </div>

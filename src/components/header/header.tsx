@@ -46,6 +46,11 @@ function MobileHeader() {
                   <Link href={"/projects"}>Projects</Link>
                 </Button>
               </Menu.Item>
+              <Menu.Item>
+                <Button asChild variant={"link"}>
+                  <Link href={"/"}>Home</Link>
+                </Button>
+              </Menu.Item>
             </div>
           </Menu.Items>
         </Transition>
@@ -59,24 +64,17 @@ export default function Header() {
     <div className={"w-full dark:bg-background bg-white mx-auto"}>
       <div className={"dark:hidden block blur"}></div>
       <div className={"hidden dark:block dark-blur"}></div>
-      <div className={"flex py-10 items-center mx-10 justify-evenly"}>
-        <div className={"hidden md:flex w-1/3"}>
-          <a href={"/"} className={twMerge(textstyles.H4, "font-bold")}>
-            Lukas K.
-          </a>
-        </div>
-        <div className={"flex md:hidden w-1/2"}>
-          <a href={"/"} className={Textstyles.H2}>
-            LK.
-          </a>
-        </div>
-        <div className={"w-1/3 justify-center hidden md:flex"}>
-          <div className={"flex w-2/3"}>
-            <Button asChild variant={"link"} className={"w-1/2"}>
-              <Link href={"/about"}><p className={Textstyles.BigText}>About</p></Link>
+      <div className={"flex py-10 w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] items-center justify-between mx-auto"}>
+        <div className={"w-1/3 hidden md:flex"}>
+          <div className={"flex w-2/3 gap-x-4 lg:gap-x-0"}>
+            <Button asChild variant={"ghost"} className={"w-1/2 hover:underline hover:underline-offset-4"}>
+              <Link href={"/"}><p className={Textstyles.BigHint}>Home</p></Link>
             </Button>
-            <Button asChild variant={"link"} className={"w-1/2"}>
-              <Link href={"/projects"}><p className={Textstyles.BigText}>Projects</p></Link>
+            <Button asChild variant={"ghost"} className={"w-1/2 hover:underline hover:underline-offset-4"}>
+              <Link href={"/about"}><p className={Textstyles.BigHint}>About</p></Link>
+            </Button>
+            <Button asChild variant={"ghost"} className={"w-1/2 hover:underline hover:underline-offset-4"}>
+              <Link href={"/projects"}><p className={Textstyles.BigHint}>Projects</p></Link>
             </Button>
           </div>
         </div>

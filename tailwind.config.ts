@@ -49,12 +49,20 @@ module.exports = {
                     "Segoe UI Symbol",
                     "Noto Color Emoji",
                 ],
+                playfare: [
+                    "var(--font-playfair)",
+                    "ui-serif",
+                    "Georgia",
+                    "Cambria",
+                    "Times New Roman",
+                    "Times",
+                    "serif",
+                ],
             },
             colors: {
                 border: "#3B3C36",
                 white: "#FDFDFD",
                 input: "hsl(var(--input))",
-                ring: "#E86100",
                 background: "#1B1B1B",
                 black: "#1B1B1B",
                 foreground: "hsl(var(--foreground))",
@@ -63,13 +71,11 @@ module.exports = {
                 grey: "#A0A0A0",
                 secondary: "#00C896",
                 destructive: "#C51E3A",
+                accent: "#FDFDFD/10",
+                "accent-foreground": "#FDFDFD/5",
                 muted: {
                     DEFAULT: "hsl(var(--muted))",
                     foreground: "hsl(var(--muted-foreground))",
-                },
-                accent: {
-                    DEFAULT: "hsl(var(--accent))",
-                    foreground: "hsl(var(--accent-foreground))",
                 },
                 popover: {
                     DEFAULT: "hsl(var(--popover))",

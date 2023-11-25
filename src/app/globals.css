@@ -55,7 +55,7 @@ body {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   opacity: .90;
-  mask-image: linear-gradient(to bottom,#FDFDFD,transparent);
+  mask-image: linear-gradient(to bottom,#FDFDFD 25%,transparent);
 }
 
 .blur:after {

@@ -29,6 +29,13 @@
       "when": 1699660540629,
       "tag": "0003_tiny_northstar",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1700903232313,
+      "tag": "0004_woozy_morlun",
+      "breakpoints": true
     }
   ]
 }

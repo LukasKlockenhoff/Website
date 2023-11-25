@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Michroma } from "next/font/google";
 import { Inter } from "next/font/google";
+import { Playfair } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import Header from "@/components/header/header";
@@ -21,6 +22,13 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const playfair = Playfair({
+  weight: ["400", "500", "600", "700", "900"],
+  subsets: ["latin-ext"],
+  display: "swap",
+  variable: "--font-playfair",
+});
+
 export const metadata: Metadata = {
   title: "Lukas Klockenhoff",
   description: "Created with Next.js and TypeScript.",
@@ -34,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={twMerge("h-full w-full overflow-y-scroll", inter.variable)}
+      className={twMerge("h-full w-full overflow-y-scroll", inter.variable, playfair.variable)}
     >
       <body className={"h-full w-full bg-white dark:bg-background"}>
         <ThemeProvider
