@@ -8,7 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import Icon from "@/components/ui/icon";
-import {twMerge} from "tailwind-merge";
+import { twMerge } from "tailwind-merge";
 import textstyles from "@/utils/textstyles";
 
 function MobileHeader() {
@@ -64,17 +64,39 @@ export default function Header() {
     <div className={"w-full dark:bg-background bg-white mx-auto"}>
       <div className={"dark:hidden block blur"}></div>
       <div className={"hidden dark:block dark-blur"}></div>
-      <div className={"flex py-10 w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] items-center justify-between mx-auto"}>
+      <div
+        className={
+          "flex py-10 w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] items-center justify-between mx-auto"
+        }
+      >
         <div className={"w-1/3 hidden md:flex"}>
           <div className={"flex w-2/3 gap-x-4 lg:gap-x-0"}>
-            <Button asChild variant={"ghost"} className={"w-1/2 hover:underline hover:underline-offset-4"}>
-              <Link href={"/"}><p className={Textstyles.BigHint}>Home</p></Link>
+            <Button
+              asChild
+              variant={"ghost"}
+              className={"w-1/2 hover:underline hover:underline-offset-4"}
+            >
+              <Link href={"/"}>
+                <p className={Textstyles.BigHint}>Home</p>
+              </Link>
             </Button>
-            <Button asChild variant={"ghost"} className={"w-1/2 hover:underline hover:underline-offset-4"}>
-              <Link href={"/about"}><p className={Textstyles.BigHint}>About</p></Link>
+            <Button
+              asChild
+              variant={"ghost"}
+              className={"w-1/2 hover:underline hover:underline-offset-4"}
+            >
+              <Link href={"/about"}>
+                <p className={Textstyles.BigHint}>About</p>
+              </Link>
             </Button>
-            <Button asChild variant={"ghost"} className={"w-1/2 hover:underline hover:underline-offset-4"}>
-              <Link href={"/projects"}><p className={Textstyles.BigHint}>Projects</p></Link>
+            <Button
+              asChild
+              variant={"ghost"}
+              className={"w-1/2 hover:underline hover:underline-offset-4"}
+            >
+              <Link href={"/projects"}>
+                <p className={Textstyles.BigHint}>Projects</p>
+              </Link>
             </Button>
           </div>
         </div>

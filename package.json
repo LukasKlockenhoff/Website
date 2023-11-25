@@ -52,11 +52,18 @@
     "drizzle-kit": "^0.19.13",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
     "postcss": "^8",
     "prettier": "3.0.3",
     "tailwindcss": "^3.3.0",
     "ts-node": "latest",
     "typescript": "latest"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }

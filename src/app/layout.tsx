@@ -42,7 +42,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={twMerge("h-full w-full overflow-y-scroll", inter.variable, playfair.variable)}
+      className={twMerge(
+        "h-full w-full overflow-y-scroll",
+        inter.variable,
+        playfair.variable,
+      )}
     >
       <body className={"h-full w-full bg-white dark:bg-background"}>
         <ThemeProvider
