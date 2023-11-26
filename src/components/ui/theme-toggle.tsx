@@ -12,11 +12,11 @@ export function ModeToggle() {
   const { setTheme } = useTheme();
 
   return (
-    <div className={"hover:cursor-pointer flex"}>
+    <div className={"hover:cursor-pointer"}>
       <Button
         variant="outline"
         size="icon"
-        className={"rounded-full dark:hidden block text-secondary"}
+        className={"flex items-center rounded-3xl dark:hidden text-grey px-6"}
         onClick={() => setTheme("dark")}
       >
         <LightModeIcon />
@@ -25,7 +25,7 @@ export function ModeToggle() {
         variant="outline"
         size="icon"
         className={
-          "rounded-full hidden dark:block hover:text-black text-border"
+          "dark:flex items-center hidden rounded-3xl px-6 hover:text-black text-border"
         }
         onClick={() => setTheme("light")}
       >

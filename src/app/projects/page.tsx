@@ -6,7 +6,6 @@ import { SelectProjects } from "@/db/schema/projects";
 
 export default async function Projects() {
   const projects: SelectProjects = await db.query.projects.findMany();
-
   const sortedProjects = projects.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
@@ -21,7 +20,7 @@ export default async function Projects() {
         <h1
           className={twMerge(
             TextStyles.H1Gradient,
-            "flex bg-clip-text bg-gradient-to-r from-emerald-600 via-emerald-300 to-emerald-100 justify-center",
+            "flex bg-clip-text bg-gradient-to-r from-emerald-600 via-emerald-300 to-emerald-100 justify-center scroll",
           )}
         >
           Projects

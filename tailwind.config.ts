@@ -62,6 +62,8 @@ module.exports = {
       colors: {
         border: "#3B3C36",
         white: "#FDFDFD",
+        "foreground-white": "#F1F1F1",
+        "foreground-black": "#2B2B2B",
         input: "hsl(var(--input))",
         background: "#1B1B1B",
         black: "#1B1B1B",
@@ -69,6 +71,7 @@ module.exports = {
         primary: "#007FFF",
         darkgrey: "#3B3C36",
         grey: "#A0A0A0",
+        lightgrey: "#E5E7EB",
         secondary: "#00C896",
         destructive: "#C51E3A",
         accent: "#FDFDFD/10",

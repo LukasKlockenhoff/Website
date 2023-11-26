@@ -37,7 +37,7 @@ export default async function Footer() {
               asChild
               variant={"ghost"}
               key={link.name}
-              className={"w-1/3 hover:underline hover:underline-offset-4"}
+              className={"w-1/3"}
             >
               <Link
                 href={link.url}

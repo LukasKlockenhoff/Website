@@ -57,7 +57,7 @@ export function MobileHeader() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white dark:bg-background p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-foreground-white dark:bg-foreground-black p-6 text-left align-middle shadow-xl transition-all mx-auto">
                   <div className="flex justify-between items-center">
                     <Dialog.Title as="h3" className={twMerge(textstyles.Text)}>
                       Navigation
@@ -71,7 +71,6 @@ export function MobileHeader() {
                     </Button>
                   </div>
                   <div className="items-start flex flex-col">
-                    <Divider variant={"fullWidth"} />
                     <Button asChild variant={"ghost"} className={""}>
                       <Link
                         href={"/about"}
@@ -81,7 +80,11 @@ export function MobileHeader() {
                         About
                       </Link>
                     </Button>
-                    <Divider />
+                    <hr
+                      className={
+                        "border-t-1/2 border-grey dark:border-border w-full mx-auto"
+                      }
+                    />
                     <Button asChild variant={"ghost"} className={""}>
                       <Link
                         href={"/projects"}
@@ -91,7 +94,11 @@ export function MobileHeader() {
                         Projects
                       </Link>
                     </Button>
-                    <Divider />
+                    <hr
+                      className={
+                        "border-t-1/2 border-grey dark:border-border w-full mx-auto"
+                      }
+                    />
                     <Button asChild variant={"ghost"} className={""}>
                       <Link
                         href={"/"}
