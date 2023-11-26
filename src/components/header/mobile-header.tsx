@@ -9,7 +9,7 @@ import Link from "next/link";
 import Divider from "@mui/material/Divider";
 
 export function MobileHeader() {
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
@@ -73,19 +73,31 @@ export function MobileHeader() {
                   <div className="items-start flex flex-col">
                     <Divider variant={"fullWidth"} />
                     <Button asChild variant={"ghost"} className={""}>
-                      <Link href={"/about"} className={textstyles.Text}>
+                      <Link
+                        href={"/about"}
+                        onClick={closeModal}
+                        className={textstyles.Text}
+                      >
                         About
                       </Link>
                     </Button>
                     <Divider />
                     <Button asChild variant={"ghost"} className={""}>
-                      <Link href={"/projects"} className={textstyles.Text}>
+                      <Link
+                        href={"/projects"}
+                        onClick={closeModal}
+                        className={textstyles.Text}
+                      >
                         Projects
                       </Link>
                     </Button>
                     <Divider />
                     <Button asChild variant={"ghost"} className={""}>
-                      <Link href={"/"} className={textstyles.Text}>
+                      <Link
+                        href={"/"}
+                        onClick={closeModal}
+                        className={textstyles.Text}
+                      >
                         Home
                       </Link>
                     </Button>
