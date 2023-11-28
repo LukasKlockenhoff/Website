@@ -10,7 +10,7 @@ export default async function About() {
     >
       <h1
         className={twMerge(
-          TextStyles.H1Gradient,
+          TextStyles.H2Gradient,
           "flex justify-center bg-clip-text bg-gradient-to-r from-emerald-600 via-emerald-300 to-emerald-100",
         )}
       >

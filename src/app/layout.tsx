@@ -31,7 +31,7 @@ const playfair = Playfair({
 
 export const metadata: Metadata = {
   title: "Lukas Klockenhoff",
-  description: "Created with Next.js and TypeScript.",
+  description: "My Portfolio.",
 };
 
 export default function RootLayout({
@@ -41,14 +41,19 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
       className={twMerge(
         "h-full w-full overflow-y-scroll",
+        michroma.variable,
         inter.variable,
         playfair.variable,
       )}
+      lang="en"
     >
-      <body className={"h-full w-full bg-white dark:bg-background"}>
+      <body
+        className={
+          "min-h-screen w-full bg-white dark:bg-background overflow-y-scroll"
+        }
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -56,7 +61,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="grid min-h-full w-full pb-20 bg-white dark:bg-background">
+          <main className="grid h-full min-h-screen w-full pb-20 bg-white dark:bg-background">
             {children}
           </main>
           <Footer />

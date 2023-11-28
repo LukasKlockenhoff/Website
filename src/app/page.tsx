@@ -17,13 +17,19 @@ const Socials = () => {
   return (
     <div className={"flex w-full gap-x-20 mx-auto justify-center m-10"}>
       <Link href={"https://www.github.com/lukasklockenhoff"}>
-        <GitHubIcon className={"w-10 h-10 text-black dark:text-white"} />
+        <GitHubIcon
+          className={"w-7 sm:w-10 h-7 sm:h-10 text-black dark:text-white"}
+        />
       </Link>
       <Link href={"https://www.x.com/lukasklff"}>
-        <TwitterIcon className={"w-10 h-10 text-black dark:text-white"} />
+        <TwitterIcon
+          className={"w-7 sm:w-10 h-7 sm:h-10 text-black dark:text-white"}
+        />
       </Link>
       <Link href={"https://www.linkedin.com/in/lukas-klockenhoff-334700244"}>
-        <LinkedInIcon className={"w-10 h-10 text-black dark:text-white"} />
+        <LinkedInIcon
+          className={"w-7 sm:w-10 h-7 sm:h-10 text-black dark:text-white"}
+        />
       </Link>
     </div>
   );
@@ -36,7 +42,7 @@ export default function Home() {
     >
       <div
         className={
-          "flex flex-col w-[90%] sm:w-2/3 mx-auto gap-y-4 justify-center pt-14 overflow-hidden"
+          "flex flex-col w-[90%] sm:w-2/3 mx-auto gap-y-4 justify-center pt-6 md:pt-14 overflow-hidden"
         }
       >
         <Image

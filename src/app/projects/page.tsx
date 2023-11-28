@@ -19,7 +19,7 @@ export default async function Projects() {
       <div className={"2xl:w-2/3 xl:w-[80%] lg:w-full mx-auto"}>
         <h1
           className={twMerge(
-            TextStyles.H1Gradient,
+            TextStyles.H2Gradient,
             "flex bg-clip-text bg-gradient-to-r from-emerald-600 via-emerald-300 to-emerald-100 justify-center scroll",
           )}
         >
