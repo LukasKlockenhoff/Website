@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Michroma } from "next/font/google";
 import { Inter } from "next/font/google";
 import { Playfair } from "next/font/google";
 import "./globals.css";
@@ -8,24 +7,13 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const michroma = Michroma({
-  weight: ["400"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-michroma",
-});
-
 const inter = Inter({
-  weight: ["400", "500", "600", "700", "900"],
   subsets: ["latin-ext"],
-  display: "swap",
   variable: "--font-inter",
 });
 
 const playfair = Playfair({
-  weight: ["400", "500", "600", "700", "900"],
   subsets: ["latin-ext"],
-  display: "swap",
   variable: "--font-playfair",
 });
 
@@ -43,7 +31,6 @@ export default function RootLayout({
     <html
       className={twMerge(
         "h-full w-full overflow-y-scroll",
-        michroma.variable,
         inter.variable,
         playfair.variable,
       )}
@@ -51,7 +38,7 @@ export default function RootLayout({
     >
       <body
         className={
-          "min-h-screen w-full bg-white dark:bg-background overflow-y-scroll"
+          "min-h-screen w-full bg-white dark:bg-background overflow-y-scroll select-text selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black"
         }
       >
         <ThemeProvider

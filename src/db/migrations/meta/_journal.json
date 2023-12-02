@@ -5,36 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1699659717637,
-      "tag": "0000_mean_stick",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1699659801974,
-      "tag": "0001_overconfident_power_pack",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1699660458082,
-      "tag": "0002_special_stark_industries",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "5",
-      "when": 1699660540629,
-      "tag": "0003_tiny_northstar",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "5",
-      "when": 1700903232313,
-      "tag": "0004_woozy_morlun",
+      "when": 1701530568357,
+      "tag": "0000_groovy_ronan",
       "breakpoints": true
     }
   ]

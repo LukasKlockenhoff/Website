@@ -6,6 +6,8 @@ const TextStyles = {
   H2Gradient:
     "font-inter font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tighter text-transparent tracking-tight",
   H3: "font-inter font-black text-6xl leading-tighter dark:text-white text-black tracking-tight",
+  H3Gradient:
+    "font-inter font-black text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-tighter text-transparent tracking-tight",
   H4: "font-inter text-2xl leading-tighter dark:text-white text-black tracking-tight",
   Highlighted: "font-inter text-sm dark:text-white text-black",
   SmallText: "font-inter text-[0.875rem] text-darkgrey dark:text-grey",

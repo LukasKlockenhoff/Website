@@ -7,28 +7,22 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
 
-export interface socialIconProps {
-  name: string;
-  icon: any;
-  url: string;
-}
-
 const Socials = () => {
   return (
     <div className={"flex w-full gap-x-20 mx-auto justify-center m-10"}>
       <Link href={"https://www.github.com/lukasklockenhoff"}>
         <GitHubIcon
-          className={"w-7 sm:w-10 h-7 sm:h-10 text-black dark:text-white"}
+          className={"w-7 h-7 text-grey dark:hover:text-white hover:text-black"}
         />
       </Link>
       <Link href={"https://www.x.com/lukasklff"}>
         <TwitterIcon
-          className={"w-7 sm:w-10 h-7 sm:h-10 text-black dark:text-white"}
+          className={"w-7 h-7 text-grey dark:hover:text-white hover:text-black"}
         />
       </Link>
       <Link href={"https://www.linkedin.com/in/lukas-klockenhoff-334700244"}>
         <LinkedInIcon
-          className={"w-7 sm:w-10 h-7 sm:h-10 text-black dark:text-white"}
+          className={"w-7 h-7 text-grey dark:hover:text-white hover:text-black"}
         />
       </Link>
     </div>
