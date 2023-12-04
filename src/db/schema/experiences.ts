@@ -1,6 +1,7 @@
 import { serial, text, timestamp, pgTable } from "drizzle-orm/pg-core";
 import { InferInsertModel, InferSelectModel, relations } from "drizzle-orm";
 import { articles } from "../../db/schema/articles";
+import { techToExperience } from "../../db/schema/techs-to-experience";
 
 export const experiences = pgTable("experiences", {
   id: serial("id").primaryKey(),
@@ -16,6 +17,7 @@ export const experiences = pgTable("experiences", {
 
 export const experiencesRelation = relations(experiences, ({ many }) => ({
   articles: many(articles),
+  techToExperience: many(techToExperience),
 }));
 
 export type SelectExperience = InferSelectModel<typeof experiences>;

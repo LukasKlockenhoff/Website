@@ -6,7 +6,9 @@ export const articles = pgTable("articles", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
   link: text("link").notNull(),
-  experienceId: integer("experience_id").notNull(),
+  experienceId: integer("experience_id")
+    .notNull()
+    .references(() => experiences.id),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
 });

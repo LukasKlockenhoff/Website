@@ -15,7 +15,7 @@ const TextStyles = {
   BigText: "font-inter text-xl text-black dark:text-white leading-tighter",
   Elevated: "font-inter sm:text-sm  dark:text-white text-black",
   BigTag: "font-inter text-[0.9375rem] dark:text-white text-black",
-  Tag: "font-inter text-xs  dark:text-white text-black",
+  Tag: "font-inter text-xs text-grey dark:text-grey",
   BigHint: "font-inter text-[1.0625rem]  text-grey hover:text-secondary",
   Hint: "font-inter text-[0.9375rem] text-grey",
   CursiveHint: "font-playfare text-sm sm:text-[1.0625rem] text-grey",
