@@ -52,7 +52,7 @@ export default function Header() {
               <Link href={"/"}>
                 <p
                   className={twMerge(
-                    Textstyles.BigHint,
+                    Textstyles.LinkText,
                     currentPath === "/" ? "!text-secondary" : "",
                   )}
                 >
@@ -64,7 +64,7 @@ export default function Header() {
               <Link href={"/about"}>
                 <p
                   className={twMerge(
-                    Textstyles.BigHint,
+                    Textstyles.LinkText,
                     currentPath === "/about" ? "!text-secondary" : "",
                   )}
                 >
@@ -76,7 +76,7 @@ export default function Header() {
               <Link href={"/projects"}>
                 <p
                   className={twMerge(
-                    Textstyles.BigHint,
+                    Textstyles.LinkText,
                     currentPath === "/projects" ? "!text-secondary" : "",
                   )}
                 >

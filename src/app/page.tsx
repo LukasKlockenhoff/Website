@@ -6,6 +6,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
+import ReadMoreLink from "@/components/projects/read-more-link";
+import ProjectCard from "@/components/projects/project-card";
+import textstyles from "@/utils/textstyles";
 
 const Socials = () => {
   return (
@@ -48,7 +51,7 @@ export default function Home() {
         />
         <div
           className={
-            "flex flex-col w-full justify-center gap-y-5 mx-auto text-leading"
+            "flex flex-col sm:w-2/3 justify-center gap-y-5 text-leading"
           }
         >
           <p className={twMerge(Textstyles.BigText, "!text-grey")}>
@@ -59,6 +62,13 @@ export default function Home() {
             <span className={twMerge(Textstyles.H3Gradient)}>Tesla</span>{" "}
             Gigafactory Berlin
           </h1>
+          <div className={textstyles.BigHint}>
+            I am a 19 year old student from Germany. I am currently studying
+            Computer Science in cooperation with Tesla in Berlin. By day I
+            develop internal Full-Stack applications for Tesla, by night I work
+            on my own projects to improve my skills and the remaining time I try
+            to spend travelling and exploring the world.
+          </div>
         </div>
         <div className={"flex w-full gap-x-20  m-0 sm:m-5"}>
           <Socials />

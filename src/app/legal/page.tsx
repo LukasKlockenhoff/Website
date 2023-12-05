@@ -1,44 +1,56 @@
 import TextStyles from "@/utils/textstyles";
 import Textstyles from "@/utils/textstyles";
 import { twMerge } from "tailwind-merge";
+import ExperienceCard from "@/components/about/experience-card";
+import textstyles from "@/utils/textstyles";
+import Image from "next/image";
+import LandingPageImage from "@/assets/LandingPageImage.png";
 
 export default async function Legal() {
   return (
-    <div className={"w-full h-full dark:bg-background bg-white"}>
-      <div className="flex h-full dark:bg-background bg-white p-4 md:p-8 sm:w-3/5 w-full  mx-auto justify-center">
-        <div className="flex flex-col mx-auto">
-          <h2 className={twMerge(Textstyles.H2, "text-center")}>Imprint</h2>
-          <div className="pt-8">
-            <p className={TextStyles.BigText}>
-              <strong>Responsible for the content:</strong>
-            </p>
-            <p className={twMerge(Textstyles.BigText, "mt-3")}>
+    <div
+      className={"w-full h-full bg-white dark:bg-background overflow-x-clip"}
+    >
+      <div
+        className={
+          "flex flex-col w-[90%] sm:w-1/2 mx-auto gap-y-4 justify-center pt-6 md:pt-14 overflow-hidden"
+        }
+      >
+        <h1
+          className={twMerge(
+            TextStyles.H3Gradient,
+            "flex justify-center bg-clip-text bg-gradient-to-r from-emerald-600 via-emerald-300 to-emerald-100",
+          )}
+        >
+          Legal
+        </h1>
+        <div
+          className={
+            "flex flex-col sm:w-2/3 justify-center gap-y-5 text-leading"
+          }
+        >
+          <div>Site notice / Imprint</div>
+          <div>Information in accordance with Section 5 TMG</div>
+          <div className={"flex flex-col"}>
+            <div>
               Lukas Klockenhoff
-            </p>
-            <p className={twMerge(Textstyles.BigText, "mt-1")}>
+              <br />
               Bredower Straße 16
-            </p>
-            <p className={twMerge(Textstyles.BigText, "mt-1")}>
+              <br />
               14612 Falkensee
-            </p>
-            <p className={twMerge(Textstyles.BigText, "mt-1")}>Germany</p>
-            <p className={twMerge(Textstyles.BigText, "pt-8")}>
-              <strong>Contact:</strong>
-            </p>
-            <p className={twMerge(Textstyles.BigText, "mt-3")}>
-              Email: lukasklockenhoff@icloud.com
-            </p>
-            <p className={twMerge(Textstyles.BigText, "mt-1")}>
-              Phone: +49 162 3487112
-            </p>
-          </div>
-          <div className="mt-6">
-            <p className={twMerge(Textstyles.Text, "mt-1")}>
-              Any use of the above contact information for commercial purposes
-              is expressly not allowed, unless I have provided my prior written
-              consent or there is already a business relationship. I hereby
-              object to any commercial use or distribution of my data.
-            </p>
+            </div>
+            <div>Contact E-Mail: l@lukaskl.com</div>
+            <div>
+              Person responsible for editorial
+              <br />
+              Lukas Klockenhoff
+              <br />
+              Bredower Straße
+              <br />
+              16
+              <br />
+              14612 Falkensee
+            </div>
           </div>
         </div>
       </div>

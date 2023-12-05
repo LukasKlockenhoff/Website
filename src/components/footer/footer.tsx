@@ -7,10 +7,10 @@ import { twMerge } from "tailwind-merge";
 const links = [
   {
     name: "Contact",
-    url: "/contact",
+    url: "https://mailto:l@lukaskl.com",
   },
   {
-    name: "Privacy Policy",
+    name: "Privacy",
     url: "/privacy",
   },
   {
@@ -42,7 +42,7 @@ export default async function Footer() {
               <Link
                 href={link.url}
                 key={link.name}
-                className={TextStyles.BigHint}
+                className={TextStyles.LinkText}
               >
                 {link.name}
               </Link>
