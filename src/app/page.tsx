@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Socials = () => {
   return (
-    <div className={"flex w-full gap-x-20 mx-auto justify-center m-10"}>
+    <div className={"flex w-full gap-x-10"}>
       <Link href={"https://www.github.com/lukasklockenhoff"}>
         <GitHubIcon
           className={"w-7 h-7 text-grey dark:hover:text-white hover:text-black"}
@@ -42,8 +42,8 @@ export default function Home() {
         <Image
           src={LandingPageImage}
           alt={""}
-          width={"200"}
-          className={"pb-10 sm:mx-0"}
+          width={"150"}
+          className={"pb-5 sm:mx-0 w-32 sm:w-[150px]"}
           draggable={false}
         />
         <div
@@ -51,27 +51,18 @@ export default function Home() {
             "flex flex-col w-full justify-center gap-y-5 mx-auto text-leading"
           }
         >
-          <p className={twMerge(twMerge(Textstyles.BigText, "!text-grey"))}>
+          <p className={twMerge(Textstyles.BigText, "!text-grey")}>
             Hi, I am Lukas Klockenhoff
           </p>
-          <h1 className={twMerge(Textstyles.H2, "pb-2")}>
+          <h1 className={twMerge(Textstyles.H3, "pb-2")}>
             Future Talent Dev at{" "}
-            <span
-              className={twMerge(
-                Textstyles.H2Gradient,
-                "bg-clip-text bg-gradient-to-r from-red-800 via-red-600 to-red-400",
-              )}
-            >
-              Tesla
-            </span>{" "}
+            <span className={twMerge(Textstyles.H3Gradient)}>Tesla</span>{" "}
             Gigafactory Berlin
           </h1>
         </div>
-      </div>
-      <div
-        className={"flex w-full gap-x-20 mx-auto justify-center m-0  sm:m-10"}
-      >
-        <Socials />
+        <div className={"flex w-full gap-x-20  m-0 sm:m-5"}>
+          <Socials />
+        </div>
       </div>
     </div>
   );

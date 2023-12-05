@@ -20,7 +20,7 @@ export default async function Projects() {
         <h1
           className={twMerge(
             TextStyles.H3Gradient,
-            "flex bg-clip-text bg-gradient-to-r from-emerald-600 via-emerald-300 to-emerald-100 justify-center scroll",
+            "flex justify-center scroll",
           )}
         >
           Projects
@@ -28,7 +28,7 @@ export default async function Projects() {
       </div>
       <div
         className={
-          "grid grid-cols-1 lg:grid-cols-2 gap-y-12 sm:gap-y-16 2xl:w-2/3 xl:w-[80%] lg:w-full mx-auto mt-20 justify-items-center"
+          "grid grid-cols-1 lg:grid-cols-2 gap-y-12 sm:gap-y-16 2xl:w-7/12 xl:w-[80%] lg:w-[90%] mx-auto mt-20 justify-items-center"
         }
       >
         {sortedProjects.map((project) => (
