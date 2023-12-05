@@ -7,7 +7,11 @@ export default async function About() {
   const experiences = (await db.query.experiences.findMany()).reverse();
 
   return (
-    <div className={"w-full h-full justify-center dark:bg-background bg-white"}>
+    <div
+      className={
+        "w-full h-full justify-center dark:bg-background bg-white overflow-x-clip"
+      }
+    >
       <h1
         className={twMerge(
           TextStyles.H3Gradient,
