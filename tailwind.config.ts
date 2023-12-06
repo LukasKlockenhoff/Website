@@ -69,7 +69,7 @@ module.exports = {
         black: "#1B1B1B",
         foreground: "hsl(var(--foreground))",
         primary: "#007FFF",
-        darkgrey: "#3B3C36",
+        darkgrey: "#52525A",
         grey: "#A0A0A0",
         lightgrey: "#E5E7EB",
         secondary: "#00C896",

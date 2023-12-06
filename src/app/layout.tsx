@@ -20,6 +20,20 @@ const playfair = Playfair({
 export const metadata: Metadata = {
   title: "Lukas Klockenhoff",
   description: "My Portfolio.",
+  openGraph: {
+    type: "website",
+    locale: "en_IE",
+    url: "https://lukaskl.com",
+    siteName: "Lukas Klockenhoff - Computer Science Student at Tesla",
+    images: [
+      {
+        url: "https://lukaskl.com/l.png",
+        width: 800,
+        height: 600,
+        alt: "Lukas Klockenhoff",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +50,10 @@ export default function RootLayout({
       )}
       lang="en"
     >
+      <head>
+        <meta property="og:image" content="url to image" />
+        <title></title>
+      </head>
       <body
         className={
           "min-h-screen w-full bg-white dark:bg-background overflow-y-scroll select-text selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black"

@@ -1,17 +1,26 @@
+"use client";
 import React from "react";
 import TextStyles from "@/utils/textstyles";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { twMerge } from "tailwind-merge";
+import Image from "next/image";
+import favicon from "@/assets/favicon.png";
+import faviconWhite from "@/assets/faviconWhite.png";
+import { usePathname } from "next/navigation";
 
 const links = [
   {
     name: "Contact",
-    url: "https://mailto:l@lukaskl.com",
+    url: "mailto:l@lukaskl.com",
   },
   {
-    name: "Privacy",
-    url: "/privacy",
+    name: "Projects",
+    url: "/projects",
+  },
+  {
+    name: "About",
+    url: "/about",
   },
   {
     name: "Legal",
@@ -19,7 +28,8 @@ const links = [
   },
 ];
 
-export default async function Footer() {
+export default function Footer() {
+  const currentPath = usePathname();
   return (
     <div className="w-full md:flex-row items-center mx-auto min-h-fit md:justify-between px-24 bg-white dark:bg-background justify-end sm:pb-0">
       <div
@@ -29,7 +39,7 @@ export default async function Footer() {
       >
         <div
           className={
-            "flex flex-col sm:flex-row items-center justify-evenly md:gap-x-20 w-full md:w-1/3"
+            "flex flex-col sm:flex-row items-center justify-evenly md:gap-x-10 w-full md:w-1/3"
           }
         >
           {links.map((link) => (

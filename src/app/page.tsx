@@ -54,7 +54,7 @@ export default function Home() {
             "flex flex-col sm:w-2/3 justify-center gap-y-5 text-leading"
           }
         >
-          <p className={twMerge(Textstyles.BigText, "!text-grey")}>
+          <p className={twMerge(Textstyles.Elevated)}>
             Hi, I am Lukas Klockenhoff
           </p>
           <h1 className={twMerge(Textstyles.H3, "pb-2")}>
@@ -63,11 +63,11 @@ export default function Home() {
             Gigafactory Berlin
           </h1>
           <div className={textstyles.BigHint}>
-            I am a 19 year old student from Germany. I am currently studying
+            I am a 19-year-old student from Germany. I am currently studying
             Computer Science in cooperation with Tesla in Berlin. By day I
             develop internal Full-Stack applications for Tesla, by night I work
             on my own projects to improve my skills and the remaining time I try
-            to spend travelling and exploring the world.
+            to spend traveling and exploring the world.
           </div>
         </div>
         <div className={"flex w-full gap-x-20  m-0 sm:m-5"}>
