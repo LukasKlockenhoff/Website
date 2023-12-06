@@ -19,21 +19,7 @@ const playfair = Playfair({
 
 export const metadata: Metadata = {
   title: "Lukas Klockenhoff",
-  description: "My Portfolio.",
-  openGraph: {
-    type: "website",
-    locale: "en_IE",
-    url: "https://lukaskl.com",
-    siteName: "Lukas Klockenhoff - Computer Science Student at Tesla",
-    images: [
-      {
-        url: "https://lukaskl.com/l.png",
-        width: 600,
-        height: 600,
-        alt: "Lukas Klockenhoff",
-      },
-    ],
-  },
+  description: "Computer Science Student at Tesla",
 };
 
 export default function RootLayout({
@@ -51,7 +37,27 @@ export default function RootLayout({
       lang="en"
     >
       <head>
-        <meta property="og:image" content="url to image" />
+        <meta property="og:site_name" content="Lukas Klockenhoff" />
+        <meta
+          property="og:title"
+          content="Computer Science Student @ Tesla in Berlin"
+        />
+        <meta
+          property="og:description"
+          content="I am a 19-year-old student from Germany. I am currently studying Computer Science in cooperation with Tesla in Berlin ..."
+        />
+        <meta property="og:url" content="https://www.lukaskl.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="article:publisher" content="https://www.lukaskl.com" />
+        <meta property="og:image" content="https://www.lukaskl.com/l.png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:image"
+          content="https://www.lukaskl.com/l.png"
+        />
+        <meta property="twitter:site" content="@lukasklff" />
         <title></title>
       </head>
       <body
