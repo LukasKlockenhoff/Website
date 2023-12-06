@@ -24,7 +24,7 @@ export default async function Projects() {
         <div
           className={twMerge(
             textstyles.BigHint,
-            "flex justify-center text-center mx-auto w-1/2 my-3",
+            "flex justify-center text-center mx-auto w-[90%] md:w-[70%] lg:w-[60%] xl:w-1/2 my-3",
           )}
         >
           Next to my studies, I am developing personal projects to improve my

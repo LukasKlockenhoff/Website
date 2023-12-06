@@ -20,7 +20,7 @@ export default async function About() {
         <div
           className={twMerge(
             textstyles.BigHint,
-            "flex justify-center text-center mx-auto w-1/2 my-3",
+            "flex justify-center text-center mx-auto w-[90%] md:w-[70%] lg:w-[60%] xl:w-1/2 my-3",
           )}
         >
           I have been a lover of technology and science since I can remember.

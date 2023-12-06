@@ -62,7 +62,14 @@ export default function Home() {
             <span className={twMerge(Textstyles.H3Gradient)}>Tesla</span>{" "}
             Gigafactory Berlin
           </h1>
-          <div className={textstyles.BigHint}>
+          <div className={twMerge(textstyles.Hint, "md:hidden")}>
+            I am a 19-year-old student from Germany. I am currently studying
+            Computer Science in cooperation with Tesla in Berlin. By day I
+            develop internal Full-Stack applications for Tesla, by night I work
+            on my own projects to improve my skills and the remaining time I try
+            to spend traveling and exploring the world.
+          </div>
+          <div className={twMerge(textstyles.BigHint, "hidden md:flex")}>
             I am a 19-year-old student from Germany. I am currently studying
             Computer Science in cooperation with Tesla in Berlin. By day I
             develop internal Full-Stack applications for Tesla, by night I work
