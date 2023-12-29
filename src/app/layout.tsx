@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+"use client";
 import { Inter } from "next/font/google";
 import { Playfair } from "next/font/google";
 import "./globals.css";
@@ -6,6 +6,7 @@ import { twMerge } from "tailwind-merge";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { usePathname } from "next/navigation";
 
 const inter = Inter({
   subsets: ["latin-ext"],
@@ -17,16 +18,30 @@ const playfair = Playfair({
   variable: "--font-playfair",
 });
 
-export const metadata: Metadata = {
-  title: "Lukas Klockenhoff",
-  description: "Computer Science Student at Tesla",
-};
+// export const metadata: Metadata = {
+//   title: "Lukas Klockenhoff",
+//   description: "Computer Science Student at Tesla",
+// };
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const location = usePathname();
+
+  const title =
+    location === "/"
+      ? "Lukas Klockenhoff"
+      : location === "/about"
+      ? "About"
+      : location === "/projects"
+      ? "Projects"
+      : location === "/legal"
+      ? "Legal"
+      : location === "/contact"
+      ? "Contact"
+      : "Lukas Klockenhoff";
   return (
     <html
       className={twMerge(
@@ -37,6 +52,7 @@ export default function RootLayout({
       lang="en"
     >
       <head>
+        <title>{title}</title>
         <meta property="og:site_name" content="Lukas Klockenhoff" />
         <meta
           property="og:title"
@@ -58,7 +74,17 @@ export default function RootLayout({
           content="https://www.lukaskl.com/l.png"
         />
         <meta property="twitter:site" content="@lukasklff" />
-        <title></title>
+        <meta property="twitter:creator" content="@lukasklff" />
+        <meta property="twitter:title" content="Lukas Klockenhoff" />
+        <meta
+          property="twitter:description"
+          content="I am a 19-year-old student from Germany. I am currently studying Computer Science in cooperation with Tesla in Berlin ..."
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <link rel="icon" type="image/png" href="favicon.ico" />
       </head>
       <body
         className={
