@@ -6,9 +6,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
-import ReadMoreLink from "@/components/projects/read-more-link";
-import ProjectCard from "@/components/projects/project-card";
 import textstyles from "@/utils/textstyles";
+
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 const Socials = () => {
   return (
@@ -39,19 +40,19 @@ export default function Home() {
     >
       <div
         className={
-          "flex flex-col w-[90%] sm:w-2/3 mx-auto gap-y-4 justify-center pt-6 md:pt-14 overflow-hidden"
+          "flex flex-col w-[90%] sm:w-2/3 mx-auto gap-y-2 justify-center pt-4 md:pt-14 overflow-hidden"
         }
       >
         <Image
           src={LandingPageImage}
           alt={""}
           width={"150"}
-          className={"pb-5 sm:mx-0 w-32 sm:w-[150px]"}
+          className={"pb-3 sm:mx-0 w-32 sm:w-[150px]"}
           draggable={false}
         />
         <div
           className={
-            "flex flex-col sm:w-2/3 justify-center gap-y-5 text-leading"
+            "flex flex-col sm:w-2/3 justify-center gap-y-3 text-leading"
           }
         >
           <p className={twMerge(Textstyles.Elevated)}>

@@ -5,6 +5,10 @@ import db from "@/db";
 import { SelectProjects } from "@/db/schema/projects";
 import textstyles from "@/utils/textstyles";
 
+// fixes prerender Error
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 export default async function Projects() {
   const projects: SelectProjects = await db.query.projects.findMany();
   const sortedProjects = projects.sort((a, b) => {

@@ -1,5 +1,5 @@
 "use client";
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import { Playfair } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
@@ -8,20 +8,10 @@ import Footer from "@/components/footer/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { usePathname } from "next/navigation";
 
-const inter = Inter({
-  subsets: ["latin-ext"],
-  variable: "--font-inter",
-});
-
 const playfair = Playfair({
   subsets: ["latin-ext"],
   variable: "--font-playfair",
 });
-
-// export const metadata: Metadata = {
-//   title: "Lukas Klockenhoff",
-//   description: "Computer Science Student at Tesla",
-// };
 
 export default function RootLayout({
   children,
@@ -46,7 +36,7 @@ export default function RootLayout({
     <html
       className={twMerge(
         "h-full w-full overflow-y-scroll",
-        inter.variable,
+        GeistSans.variable,
         playfair.variable,
       )}
       lang="en"
@@ -98,7 +88,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="grid h-full min-h-screen w-full pb-20 bg-white dark:bg-background">
+          <main className="grid h-full min-h-screen w-full pb-20 bg-white dark:bg-background font-sans">
             {children}
           </main>
           <Footer />

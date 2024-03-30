@@ -1,12 +1,12 @@
 import TextStyles from "@/utils/textstyles";
-import Textstyles from "@/utils/textstyles";
 import { twMerge } from "tailwind-merge";
-import ExperienceCard from "@/components/about/experience-card";
 import textstyles from "@/utils/textstyles";
-import Image from "next/image";
-import LandingPageImage from "@/assets/LandingPageImage.png";
 import { List, ListItem } from "@mui/material";
 import ReadMoreLink from "@/components/projects/read-more-link";
+
+// fixes prerender Error
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 export default async function Legal() {
   return (

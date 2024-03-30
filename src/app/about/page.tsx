@@ -4,6 +4,10 @@ import ExperienceCard from "@/components/about/experience-card";
 import db from "@/db";
 import textstyles from "@/utils/textstyles";
 
+// fixes prerender Error
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 export default async function About() {
   const experiences = (await db.query.experiences.findMany()).reverse();
 

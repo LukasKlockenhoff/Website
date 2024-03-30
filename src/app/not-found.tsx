@@ -1,7 +1,9 @@
-import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import Textstyles from "@/utils/textstyles";
-import { Button } from "@/components/ui/button";
+
+// fixes prerender Error
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 export default function NotFound() {
   return (
