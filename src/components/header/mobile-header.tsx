@@ -99,6 +99,20 @@ export function MobileHeader() {
                         "border-t-1/2 border-grey dark:border-border w-full mx-auto"
                       }
                     />
+                    <hr
+                      className={
+                        "border-t-1/2 border-grey dark:border-border w-full mx-auto"
+                      }
+                    />
+                    <Button asChild variant={"ghost"} className={""}>
+                      <Link
+                        href={"/photos"}
+                        onClick={closeModal}
+                        className={textstyles.Text}
+                      >
+                        Photos
+                      </Link>
+                    </Button>
                     <Button asChild variant={"ghost"} className={""}>
                       <Link
                         href={"/"}

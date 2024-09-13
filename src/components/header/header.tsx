@@ -84,6 +84,18 @@ export default function Header() {
                 </p>
               </Link>
             </Button>
+            <Button asChild variant={"ghost"} className={"w-1/2"}>
+              <Link href={"/photos"}>
+                <p
+                  className={twMerge(
+                    Textstyles.LinkText,
+                    currentPath === "/photos" ? "!text-secondary" : "",
+                  )}
+                >
+                  Photos
+                </p>
+              </Link>
+            </Button>
           </div>
         </div>
         <div className={"w-full justify-end md:hidden flex"}>
