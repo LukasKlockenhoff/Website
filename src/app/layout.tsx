@@ -7,6 +7,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { usePathname } from "next/navigation";
+import { Analytics } from "@vercel/analytics/react";
 
 const playfair = Playfair({
   subsets: ["latin-ext"],
@@ -81,6 +82,7 @@ export default function RootLayout({
           "min-h-screen w-full bg-white dark:bg-background overflow-y-scroll select-text selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black"
         }
       >
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
