@@ -22,24 +22,25 @@ export default async function Projects() {
       }
     >
       <div className={"2xl:w-2/3 xl:w-[80%] lg:w-full mx-auto"}>
-        <h1 className={twMerge("flex scroll justify-center m-fit")}>
-          <span className={TextStyles.H3Gradient}>Projects</span>
-        </h1>
         <div
           className={twMerge(
-            textstyles.BigHint,
-            "flex justify-center text-center mx-auto w-[90%] md:w-[70%] lg:w-[60%] xl:w-1/2 my-3",
+            "flex flex-col justify-center mx-auto w-[90%] md:w-[70%] lg:w-[60%] xl:w-1/2 my-3",
           )}
         >
-          Next to my studies, I am developing personal projects to improve my
-          programming, design, and architecture skills. Here are some of them
-          and the technologies I used. You can find the code on my GitHub via
-          the provided link.
+          <div className={twMerge(textstyles.Elevated, "!text-2xl")}>
+            Projects
+          </div>
+          <div className={twMerge(textstyles.BigHint)}>
+            Next to my studies, I am developing personal projects to improve my
+            programming, design, and architecture skills. Here are some of them
+            and the technologies I used. You can find the code on my GitHub via
+            the provided link.
+          </div>
         </div>
       </div>
       <div
         className={
-          "grid grid-cols-1 lg:grid-cols-2 gap-y-12 sm:gap-y-16 2xl:w-7/12 xl:w-[80%] lg:w-[90%] mx-auto mt-20 justify-items-center"
+          "w-full sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-1/2 2xl:w-1/3 md:w- flex flex-col items-center mx-auto"
         }
       >
         {sortedProjects.map((project) => (

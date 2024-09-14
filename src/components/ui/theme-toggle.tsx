@@ -14,7 +14,7 @@ export function ModeToggle() {
   return (
     <div className={"hover:cursor-pointer"}>
       <Button
-        variant="outline"
+        variant="ghost"
         size="icon"
         className={"flex items-center rounded-3xl dark:hidden text-grey px-6"}
         onClick={() => setTheme("dark")}
@@ -22,11 +22,9 @@ export function ModeToggle() {
         <LightModeIcon />
       </Button>
       <Button
-        variant="outline"
+        variant="ghost"
         size="icon"
-        className={
-          "dark:flex items-center hidden rounded-3xl px-6 hover:text-black text-border"
-        }
+        className={"dark:flex items-center hidden rounded-3xl px-6 text-border"}
         onClick={() => setTheme("light")}
       >
         <DarkModeIcon />

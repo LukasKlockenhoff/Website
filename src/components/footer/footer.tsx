@@ -23,6 +23,10 @@ const links = [
     url: "/about",
   },
   {
+    name: "Photos",
+    url: "/photos",
+  },
+  {
     name: "Legal",
     url: "/legal",
   },

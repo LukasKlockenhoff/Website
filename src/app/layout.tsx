@@ -1,5 +1,6 @@
 "use client";
 import { GeistSans } from "geist/font/sans";
+import { Imbue } from "next/font/google";
 import { Playfair } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
@@ -12,6 +13,11 @@ import { Analytics } from "@vercel/analytics/react";
 const playfair = Playfair({
   subsets: ["latin-ext"],
   variable: "--font-playfair",
+});
+
+const imbue = Imbue({
+  subsets: ["latin-ext"],
+  variable: "--font-imbue",
 });
 
 export default function RootLayout({
@@ -32,6 +38,8 @@ export default function RootLayout({
       ? "Legal"
       : location === "/contact"
       ? "Contact"
+      : location === "/photos"
+      ? "Photos"
       : "Lukas Klockenhoff";
   return (
     <html
@@ -39,6 +47,7 @@ export default function RootLayout({
         "h-full w-full overflow-y-scroll",
         GeistSans.variable,
         playfair.variable,
+        imbue.variable,
       )}
       lang="en"
     >

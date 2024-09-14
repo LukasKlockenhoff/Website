@@ -33,6 +33,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
+        serif: ["var(--font-imbue)"],
         playfare: [
           "var(--font-playfair)",
           "ui-serif",
@@ -56,7 +57,7 @@ module.exports = {
         darkgrey: "#52525A",
         grey: "#A0A0A0",
         lightgrey: "#E5E7EB",
-        secondary: "#00C896",
+        secondary: "#FD6401",
         destructive: "#C51E3A",
         accent: "#FDFDFD/10",
         "accent-foreground": "#FDFDFD/5",

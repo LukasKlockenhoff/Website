@@ -10,18 +10,20 @@ const TextStyles = {
     "font-sans font-black text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-tighter text-transparent tracking-tight bg-clip-text bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-200",
   H4: "font-sans font-black text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl leading-tighter dark:text-white text-bold tracking-tight",
   Highlighted: "font-sans text-sm dark:text-white text-black",
-  SmallText: "font-sans text-[0.875rem] text-darkgrey dark:text-grey",
+  SmallText:
+    "font-sans font-light text-[0.875rem] text-darkgrey dark:text-white",
   Text: "font-sans text-base sm:text-[0.875rem] text-black dark:text-white",
   BigText:
     "font-sans text-md md:text-xl text-black dark:text-white leading-tighter",
   Elevated:
-    "font-sans text-md md:text-xl text-black dark:text-grey text-darkgrey leading-tighter",
+    "font-playfare text-md md:text-xl dark:text-white text-darkgrey leading-tighter mb-2",
   BigTag: "font-sans text-[0.9375rem] dark:text-white text-black",
   Tag: "font-sans text-xs text-darkgrey dark:text-grey",
   LinkText:
-    "font-sans text-[1.0625rem] text-darkgrey dark:text-grey hover:text-secondary",
-  BigHint: "font-sans text-[1.0625rem]  text-darkgrey dark:text-grey",
-  Hint: "font-sans text-[0.9375rem] text-darkgrey dark:text-grey",
+    "font-playfare text-[1.0625rem] text-darkgrey dark:text-grey hover:underline",
+  BigHint:
+    "font-sans font-extralight text-[1.0625rem] text-darkgrey dark:text-white",
+  Hint: "font-sans text-[0.9375rem] text-darkgrey dark:text-white",
   CursiveHint:
     "font-playfare text-sm sm:text-[1.0625rem] text-darkgrey dark:text-grey",
 } as const;

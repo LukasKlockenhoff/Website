@@ -31,7 +31,7 @@ const ProjectImageSuspense = () => {
 export default async function ProjectCard({
   project: { id, title, description, date, slug, link, github },
 }: ProjectCardProps) {
-  const supabase = createClient(env.SUPABASE_PUBLIC_URL, env.DB_PUBLIC_KEY);
+  // const supabase = createClient(env.SUPABASE_PUBLIC_URL, env.DB_PUBLIC_KEY);
   const skills = await db.query.techToProject.findMany({
     where: eq(techToProject.projectId, id),
     with: {
@@ -55,7 +55,7 @@ export default async function ProjectCard({
   };
 
   return (
-    <div className="group relative bg-white dark:bg-background w-[100%] sm:w-[450px] p-8 sm:p-2">
+    <div className="group relative bg-white dark:bg-background w-full p-8 sm:p-2 mx-auto mt-14">
       <div
         className={
           "absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-xl"
@@ -73,7 +73,7 @@ export default async function ProjectCard({
           </div>
           <div className={"w-3/4"}>
             <div className={"relative flex flex-col"}>
-              <Suspense fallback={<ProjectImageSuspense />}>
+              {/* <Suspense fallback={<ProjectImageSuspense />}>
                 <Image
                   alt=""
                   src={
@@ -85,11 +85,11 @@ export default async function ProjectCard({
                   height={50}
                   className={"rounded-full bg-white"}
                 />
-              </Suspense>
+              </Suspense> */}
               <div
                 className={twMerge(
-                  textstyles.BigText,
-                  "my-2 group-hover:text-secondary",
+                  textstyles.Elevated,
+                  "group-hover:text-secondary",
                 )}
               >
                 <Link href={link}>

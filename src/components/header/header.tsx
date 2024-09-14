@@ -53,7 +53,9 @@ export default function Header() {
                 <p
                   className={twMerge(
                     Textstyles.LinkText,
-                    currentPath === "/" ? "!text-secondary" : "",
+                    currentPath === "/"
+                      ? "!underline decoration-secondary"
+                      : "",
                   )}
                 >
                   Home
@@ -65,7 +67,9 @@ export default function Header() {
                 <p
                   className={twMerge(
                     Textstyles.LinkText,
-                    currentPath === "/about" ? "!text-secondary" : "",
+                    currentPath === "/about"
+                      ? "!underline decoration-secondary"
+                      : "",
                   )}
                 >
                   About
@@ -77,7 +81,9 @@ export default function Header() {
                 <p
                   className={twMerge(
                     Textstyles.LinkText,
-                    currentPath === "/projects" ? "!text-secondary" : "",
+                    currentPath === "/projects"
+                      ? "!underline decoration-secondary"
+                      : "",
                   )}
                 >
                   Projects
@@ -89,7 +95,9 @@ export default function Header() {
                 <p
                   className={twMerge(
                     Textstyles.LinkText,
-                    currentPath === "/photos" ? "!text-secondary" : "",
+                    currentPath === "/photos"
+                      ? "!underline decoration-secondary"
+                      : "",
                   )}
                 >
                   Photos

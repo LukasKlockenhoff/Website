@@ -18,7 +18,7 @@ export default function ReadMoreLink({ link, title }: ReadMoreLinkProps) {
   return (
     <div
       className={"group/link"}
-      onMouseOver={() => setFillColor("#00C896")}
+      onMouseOver={() => setFillColor("#FD6401")}
       onMouseLeave={() => setFillColor("#A0A0A0")}
     >
       <Button variant={"hoverlink"} asChild>

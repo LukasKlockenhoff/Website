@@ -68,8 +68,8 @@ export default async function ExperienceCard({
             <div className={"relative flex flex-col"}>
               <div
                 className={twMerge(
-                  textstyles.BigText,
-                  "mb-2 group-hover:text-secondary",
+                  textstyles.Elevated,
+                  "group-hover:text-secondary",
                 )}
               >
                 <Link href={link}>

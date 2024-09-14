@@ -29,6 +29,7 @@ import P023 from "../../../public/gallery/P023.png";
 import P024 from "../../../public/gallery/P024.png";
 import P025 from "../../../public/gallery/P025.png";
 import P026 from "../../../public/gallery/P026.png";
+import P027 from "../../../public/gallery/P027.png";
 
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -69,7 +70,7 @@ const photos = [
   P026,
 ];
 
-const prioPhotos = [P001, P002, P003, P004, P005, P006, P007, P008, P009];
+const prioPhotos = [P001, P002, P003, P004, P005, P006, P027, P007, P008, P009];
 
 export default function Photos() {
   return (

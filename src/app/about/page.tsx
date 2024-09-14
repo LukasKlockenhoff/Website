@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 import ExperienceCard from "@/components/about/experience-card";
 import db from "@/db";
 import textstyles from "@/utils/textstyles";
+import { text } from "stream/consumers";
 
 // fixes prerender Error
 export const dynamic = "force-dynamic";
@@ -18,19 +19,18 @@ export default async function About() {
       }
     >
       <div className={"2xl:w-2/3 xl:w-[80%] lg:w-full mx-auto"}>
-        <h1 className={twMerge("flex justify-center m-fit")}>
-          <span className={TextStyles.H3Gradient}>About</span>
-        </h1>
         <div
           className={twMerge(
-            textstyles.BigHint,
-            "flex justify-center text-center mx-auto w-[90%] md:w-[70%] lg:w-[60%] xl:w-1/2 my-3",
+            "flex flex-col justify-center mx-auto w-[90%] md:w-[70%] lg:w-[60%] xl:w-1/2 my-3",
           )}
         >
-          I have been a lover of technology and science since I can remember.
-          Computer Science and the art of solving problems with code is my
-          passion. Below you can find my professional experience and my
-          education - a list that I am constantly working on expanding.
+          <div className={twMerge(textstyles.Elevated, "!text-2xl")}>About</div>
+          <div className={twMerge(textstyles.BigHint)}>
+            I have been a lover of technology and science since I can remember.
+            Computer Science and the art of solving problems with code is my
+            passion. Below you can find my professional experience and my
+            education - a list that I am constantly working on expanding.
+          </div>
         </div>
       </div>
       <div
