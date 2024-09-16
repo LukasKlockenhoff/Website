@@ -4,9 +4,6 @@ import TextStyles from "@/utils/textstyles";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { twMerge } from "tailwind-merge";
-import Image from "next/image";
-import favicon from "@/assets/favicon.png";
-import faviconWhite from "@/assets/faviconWhite.png";
 import { usePathname } from "next/navigation";
 
 const links = [

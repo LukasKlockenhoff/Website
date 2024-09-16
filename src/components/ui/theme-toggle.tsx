@@ -21,7 +21,7 @@ export function ModeToggle() {
         variant="ghost"
         className={twMerge(
           TextStyles.LinkText,
-          "flex items-center rounded-3xl dark:hidden text-grey px-6",
+          "flex items-center rounded-3xl dark:hidden text-darkgrey px-6",
         )}
         onClick={() => setTheme("dark")}
       >
@@ -31,7 +31,7 @@ export function ModeToggle() {
         variant="ghost"
         className={twMerge(
           TextStyles.LinkText,
-          "dark:flex items-center hidden rounded-3xl px-6 text-border",
+          "dark:flex items-center hidden rounded-3xl px-6 text-grey",
         )}
         onClick={() => setTheme("light")}
       >

@@ -88,7 +88,7 @@ export default function RootLayout({
       </head>
       <body
         className={
-          "min-h-screen w-full bg-white dark:bg-background overflow-y-scroll select-text selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black"
+          "min-h-screen w-full bg-white dark:bg-background overflow-x-clip overflow-y-scroll select-text selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black"
         }
       >
         <Analytics />
