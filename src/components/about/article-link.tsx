@@ -17,7 +17,7 @@ export default function ArticleLink({ article }: ArticleLinkProps) {
   return (
     <div
       className={"group/link"}
-      onMouseOver={() => setFillColor("#FD6401")}
+      onMouseOver={() => setFillColor("#c60000")}
       onMouseLeave={() => setFillColor("#A0A0A0")}
     >
       <Button variant={"hoverlink"} asChild>

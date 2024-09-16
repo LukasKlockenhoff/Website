@@ -1,3 +1,9 @@
+import localFont from "next/font/local";
+import { twMerge } from "tailwind-merge";
+const fornire = localFont({
+  src: "../../src/assets/fonts/fornire-light.woff2",
+});
+
 const TextStyles = {
   H1: "font-sans font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tighter dark:text-white text-black tracking-tight",
   H1Gradient:
@@ -16,11 +22,13 @@ const TextStyles = {
   BigText:
     "font-sans text-md md:text-xl text-black dark:text-white leading-tighter",
   Elevated:
-    "font-playfare text-md md:text-xl dark:text-white text-darkgrey leading-tighter mb-2",
+    "font-playfare text-xl md:text-xl dark:text-white text-darkgrey leading-tighter mb-2",
   BigTag: "font-sans text-[0.9375rem] dark:text-white text-black",
   Tag: "font-sans text-xs text-darkgrey dark:text-grey",
-  LinkText:
-    "font-playfare text-[1.0625rem] text-darkgrey dark:text-grey hover:underline",
+  LinkText: twMerge(
+    fornire.className,
+    "font-playfare font-light text-xl text-darkgrey dark:text-white hover:underline hover:decoration-1",
+  ),
   BigHint:
     "font-sans font-extralight text-[1.0625rem] text-darkgrey dark:text-white",
   Hint: "font-sans text-[0.9375rem] text-darkgrey dark:text-white",

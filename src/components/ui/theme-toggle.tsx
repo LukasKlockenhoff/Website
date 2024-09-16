@@ -7,6 +7,10 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
 import { Button } from "@/components/ui/button";
+import { SunIcon } from "@radix-ui/react-icons";
+import { MoonIcon } from "@radix-ui/react-icons";
+import TextStyles from "@/utils/textstyles";
+import { twMerge } from "tailwind-merge";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
@@ -15,19 +19,23 @@ export function ModeToggle() {
     <div className={"hover:cursor-pointer"}>
       <Button
         variant="ghost"
-        size="icon"
-        className={"flex items-center rounded-3xl dark:hidden text-grey px-6"}
+        className={twMerge(
+          TextStyles.LinkText,
+          "flex items-center rounded-3xl dark:hidden text-grey px-6",
+        )}
         onClick={() => setTheme("dark")}
       >
-        <LightModeIcon />
+        <SunIcon />
       </Button>
       <Button
         variant="ghost"
-        size="icon"
-        className={"dark:flex items-center hidden rounded-3xl px-6 text-border"}
+        className={twMerge(
+          TextStyles.LinkText,
+          "dark:flex items-center hidden rounded-3xl px-6 text-border",
+        )}
         onClick={() => setTheme("light")}
       >
-        <DarkModeIcon />
+        <MoonIcon />
       </Button>
     </div>
   );

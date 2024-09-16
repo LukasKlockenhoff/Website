@@ -15,18 +15,6 @@ const links = [
     url: "mailto:l@lukaskl.com",
   },
   {
-    name: "Projects",
-    url: "/projects",
-  },
-  {
-    name: "About",
-    url: "/about",
-  },
-  {
-    name: "Photos",
-    url: "/photos",
-  },
-  {
     name: "Legal",
     url: "/legal",
   },

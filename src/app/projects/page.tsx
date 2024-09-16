@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 import db from "@/db";
 import { SelectProjects } from "@/db/schema/projects";
 import textstyles from "@/utils/textstyles";
+import { siteConfig } from "@/siteconfig";
 
 // fixes prerender Error
 export const dynamic = "force-dynamic";
@@ -21,31 +22,30 @@ export default async function Projects() {
         "w-full h-full justify-center dark:bg-background bg-white overflow-x-clip"
       }
     >
-      <div className={"2xl:w-2/3 xl:w-[80%] lg:w-full mx-auto"}>
-        <div
-          className={twMerge(
-            "flex flex-col justify-center mx-auto w-[90%] md:w-[70%] lg:w-[60%] xl:w-1/2 my-3",
-          )}
-        >
+      <div
+        className={
+          "w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] mx-auto flex flex-col justify-center my-3"
+        }
+      >
+        <div className={twMerge("max-w-[600px] justify-center mx-auto w-full")}>
           <div className={twMerge(textstyles.Elevated, "!text-2xl")}>
             Projects
           </div>
           <div className={twMerge(textstyles.BigHint)}>
-            Next to my studies, I am developing personal projects to improve my
-            programming, design, and architecture skills. Here are some of them
-            and the technologies I used. You can find the code on my GitHub via
-            the provided link.
+            {siteConfig.pages.projects.text}
           </div>
         </div>
       </div>
       <div
         className={
-          "w-full sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-1/2 2xl:w-1/3 md:w- flex flex-col items-center mx-auto"
+          "w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] mx-auto flex flex-col justify-center"
         }
       >
-        {sortedProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        <div className={twMerge("max-w-[600px] justify-center mx-auto w-full")}>
+          {sortedProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
       </div>
     </div>
   );
