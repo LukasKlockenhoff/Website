@@ -11,30 +11,22 @@ export const fetchCache = "force-no-store";
 export default async function Legal() {
   return (
     <div
-      className={"w-full h-full bg-white dark:bg-background overflow-x-clip"}
+      className={
+        "w-full h-full justify-center dark:bg-background bg-white overflow-x-clip"
+      }
     >
-      <div className={"2xl:w-2/3 xl:w-[80%] lg:w-full mx-auto"}>
-        <h1
-          className={twMerge(TextStyles.H3Gradient, "flex justify-center pb-2")}
-        >
-          Legal
-        </h1>
-      </div>
       <div
         className={
-          "flex flex-col w-[90%] sm:w-2/3 mx-auto gap-y-4 justify-center pt-6 md:pt-14 overflow-hidden"
+          "w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] mx-auto flex flex-col justify-center my-3"
         }
       >
-        <div
-          className={
-            "flex flex-col sm:w-2/3 justify-center text-leading w-[90%] mx-auto pt-6 md:pt-14 overflow-hidden"
-          }
-        >
-          <div>
-            <div className={twMerge(textstyles.BigText, "!font-bold")}>
+        <div className={twMerge("max-w-[600px] justify-center mx-auto w-full")}>
+          <div className={twMerge(textstyles.Elevated, "!text-2xl")}>Legal</div>
+          <div className={twMerge(textstyles.Elevated)}>
+            <div className={twMerge(textstyles.Elevated, "!font-bold")}>
               Site notice / Imprint
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6")}>
               Information in accordance with Section 5 TMG
             </div>
             <div
@@ -53,7 +45,7 @@ export default async function Legal() {
             <div
               className={twMerge(textstyles.SmallText, "flex flex-col mt-6")}
             >
-              <div className={twMerge(textstyles.BigHint)}>
+              <div className={twMerge(textstyles.Elevated)}>
                 Person responsible for editorial
               </div>
               <div
@@ -72,13 +64,13 @@ export default async function Legal() {
             </div>
           </div>
           <div>
-            <div className={twMerge(textstyles.BigText, "!font-bold mt-12")}>
+            <div className={twMerge(textstyles.Elevated, "!font-bold mt-12")}>
               Privacy Policy
             </div>
-            <div className={twMerge(textstyles.BigText, "mt-6")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6")}>
               1 Data protection at a glance
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-3 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-3 ml-4")}>
               General information
             </div>
             <div
@@ -94,7 +86,7 @@ export default async function Legal() {
               protection can be found in our data protection data protection
               declaration.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-3 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-3 ml-4")}>
               Data collection on this website
             </div>
             <div
@@ -108,7 +100,7 @@ export default async function Legal() {
               The operator&apos;s contact details can be found in the section
               &quot;Information on the controller&quot; in this privacy policy.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-3 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-3 ml-4")}>
               How do we collect your data?
             </div>
             <div
@@ -126,7 +118,7 @@ export default async function Legal() {
               collected automatically automatically as soon as you enter this
               website.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-3 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-3 ml-4")}>
               What do we use your data for?
             </div>
             <div
@@ -139,7 +131,7 @@ export default async function Legal() {
               provision of the website. guarantee error-free provision of the
               website. Other data may be used to analyse your user behaviour.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-3 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-3 ml-4")}>
               What rights do you have regarding your data?
             </div>
             <div
@@ -161,7 +153,7 @@ export default async function Legal() {
               regarding this and other questions on the subject of data
               protection at any time.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-3 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-3 ml-4")}>
               Analysis tools and tools from third-party providers
             </div>
             <div
@@ -175,7 +167,7 @@ export default async function Legal() {
               analysis programmes. Detailed information on these analysis
               programmes can be found in the following privacy policy.
             </div>
-            <div className={twMerge(textstyles.BigText, "mt-6")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6")}>
               2 Hosting and content delivery networks (CDN)
             </div>
             <div
@@ -215,10 +207,10 @@ export default async function Legal() {
                 <div>Phoenix, AZ 85034, USA</div>
               </div>
             </div>
-            <div className={twMerge(textstyles.BigText, "mt-6")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6")}>
               3 General notes and mandatory information
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6 ml-4")}>
               Data protection
             </div>
             <div
@@ -240,7 +232,7 @@ export default async function Legal() {
               Complete protection of data against access by access by third
               parties is not possible. Note on the responsible body
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6 ml-4")}>
               Note on the responsible body
             </div>
             <div
@@ -257,7 +249,7 @@ export default async function Legal() {
               data (e.g. names, email addresses, etc.). names, e-mail addresses,
               etc.).
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6 ml-4")}>
               Storage period
             </div>
             <div
@@ -277,7 +269,7 @@ export default async function Legal() {
               latter case, the deletion will take place after these reasons no
               longer apply.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6 ml-4")}>
               General information on the legal basis for data processing on this
               website
             </div>
@@ -308,7 +300,7 @@ export default async function Legal() {
               The relevant legal bases in each individual case legal basis is
               provided in the following paragraphs of this privacy policy.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6 ml-4")}>
               Recipients of personal data
             </div>
             <div
@@ -331,7 +323,7 @@ export default async function Legal() {
               processing. In the case of joint processing a joint processing
               agreement is concluded.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6 ml-4")}>
               Revocation of your consent to data processing
             </div>
             <div
@@ -365,7 +357,7 @@ export default async function Legal() {
               PURPOSE OF DIRECT ADVERTISING (OBJECTION ACCORDING TO ARTICLE 21
               (2) GDPR).
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6 ml-4")}>
               Right to lodge a complaint with the responsible supervisory
               authority
             </div>
@@ -389,7 +381,7 @@ export default async function Legal() {
               will only be done to the extent that it is technically feasible
               is.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6 ml-4")}>
               Information, correction and deletion
             </div>
             <div
@@ -405,7 +397,7 @@ export default async function Legal() {
               of this data. This and other questions on the subject of personal
               data you can contact us at any time.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6 ml-4")}>
               Right to restriction of processing
             </div>
             <div
@@ -462,7 +454,7 @@ export default async function Legal() {
               important importance processed in the public interest of the
               European Union or a Member State.
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-6 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6 ml-4")}>
               SSL or TLS encryption
             </div>
             <div
@@ -479,10 +471,10 @@ export default async function Legal() {
               your browser line. If SSL or TLS encryption is activated, the data
               you transmit to us cannot be read by third parties.
             </div>
-            <div className={twMerge(textstyles.BigText, "mt-6")}>
+            <div className={twMerge(textstyles.Elevated, "mt-6")}>
               4 Data collection on this website
             </div>
-            <div className={twMerge(textstyles.BigHint, "mt-3 ml-4")}>
+            <div className={twMerge(textstyles.Elevated, "mt-3 ml-4")}>
               Cookies
             </div>
             <div

@@ -57,7 +57,7 @@ module.exports = {
         darkgrey: "#52525A",
         grey: "#A0A0A0",
         lightgrey: "#E5E7EB",
-        secondary: "#c60000",
+        secondary: "#FFB770",
         destructive: "#C51E3A",
         accent: "#FDFDFD/10",
         "accent-foreground": "#FDFDFD/5",
