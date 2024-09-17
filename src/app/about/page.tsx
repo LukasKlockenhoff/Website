@@ -3,8 +3,8 @@ import { twMerge } from "tailwind-merge";
 import ExperienceCard from "@/components/about/experience-card";
 import db from "@/db";
 import textstyles from "@/utils/textstyles";
-import { text } from "stream/consumers";
 import { siteConfig } from "@/siteconfig";
+import { Resume, ResumeLink } from "@/components/about/resume";
 
 // fixes prerender Error
 export const dynamic = "force-dynamic";
@@ -29,6 +29,7 @@ export default async function About() {
           <div className={twMerge(textstyles.BigHint)}>
             {siteConfig.pages.about.text}
           </div>
+          <ResumeLink />
         </div>
       </div>
       <div

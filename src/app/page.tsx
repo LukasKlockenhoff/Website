@@ -40,13 +40,27 @@ export default function Home() {
         }
       >
         <div className={twMerge("max-w-[650px] justify-center mx-auto w-full")}>
-          <div className={twMerge(textstyles.Elevated, "!text-2xl")}>
+          <div
+            className={twMerge(
+              textstyles.Elevated,
+              "!text-2xl text-enter animate-text-enter delay-1 opacity-0",
+            )}
+          >
             Hi, I am Lukas Klockenhoff
           </div>
-          <div className={twMerge(textstyles.BigHint, "flex font-extralight")}>
+          <div
+            className={twMerge(
+              textstyles.BigHint,
+              "flex font-extralight animate-text-enter delay-2 opacity-0",
+            )}
+          >
             {siteConfig.pages.home.text}
           </div>
-          <div className={"flex w-full  m-0 sm:m-5  mx-auto"}>
+          <div
+            className={
+              "flex w-full  m-0 sm:m-5  mx-auto animate-text-enter delay-3 opacity-0"
+            }
+          >
             <Socials />
           </div>
         </div>

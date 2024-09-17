@@ -5,6 +5,7 @@ import db from "@/db";
 import { SelectProjects } from "@/db/schema/projects";
 import textstyles from "@/utils/textstyles";
 import { siteConfig } from "@/siteconfig";
+import { Resume, ResumeLink } from "@/components/about/resume";
 
 // fixes prerender Error
 export const dynamic = "force-dynamic";
@@ -34,6 +35,7 @@ export default async function Projects() {
           <div className={twMerge(textstyles.BigHint)}>
             {siteConfig.pages.projects.text}
           </div>
+          <ResumeLink />
         </div>
       </div>
       <div
