@@ -1,3 +1,4 @@
+import { RocketIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 export const Resume = () => {
@@ -8,7 +9,10 @@ export const Resume = () => {
           "https://drive.google.com/file/d/1hxBILrFYihuPWYb13gO7sPuRvnRKnlon/view?usp=sharing"
         }
       >
-        <p className="font-playfare font-thin italic">find my résumé here</p>
+        <p className="font-playfare font-thin italic flex">
+          <RocketIcon className="w-4 text-secondary" />
+          find my résumé here
+        </p>
       </Link>
     </div>
   );
@@ -17,9 +21,8 @@ export const Resume = () => {
 export const ResumeLink = () => {
   return (
     <div className="mt-5 h-full relative">
-      <div className="w-5 h-5 bg-white dark:bg-background self-center absolute left-[-1.25rem] z-10"></div>
-      <div className="hover:translate-x-[1rem] transition-transform hover:delay-0 delay-500 flex absolute left-[-1rem]">
-        <div>✨</div>
+      <div className="w-10 h-10 bg-white dark:bg-background self-center absolute left-[-2.5rem] z-10"></div>
+      <div className="hover:translate-x-[1rem] transition-transform hover:delay-0 delay-500 flex absolute left-[-1rem] items-center">
         <Resume />
       </div>
     </div>
