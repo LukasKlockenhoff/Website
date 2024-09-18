@@ -125,3 +125,41 @@ export default async function ProjectCard({
     </div>
   );
 }
+
+export const CardFallback = () => {
+  return (
+    <div className="group relative bg-white dark:bg-background w-full p-8 sm:p-2 mx-auto mt-14">
+      <div
+        className={
+          "absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-100 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-xl"
+        }
+      ></div>
+      <div className={"flex-col"}>
+        <div className={"relative flex w-full justify-between gap-x-2"}>
+          <div
+            className={twMerge(
+              Textstyles.SmallText,
+              "relative flex justify-end",
+            )}
+          >
+            <div className="h-4 w-20 bg-gray-300/50 animate-pulse rounded-lg" />
+          </div>
+          <div className={"w-3/4"}>
+            <div className={"relative flex flex-col gap-3"}>
+              <div className="h-4 w-1/3a bg-gray-300/50 animate-pulse rounded-lg" />
+              <div className="flex flex-col gap-2">
+                <div className="h-4 w-full bg-gray-300/50 animate-pulse rounded-lg" />
+                <div className="h-4 w-full bg-gray-300/50 animate-pulse rounded-lg" />
+              </div>
+              <div className={"relative flex gap-x-2 mt-3"}>
+                <div className="h-4 w-16 bg-gray-300/50 animate-pulse rounded-lg" />
+                <div className="h-4 w-16 bg-gray-300/50 animate-pulse rounded-lg" />
+                <div className="h-4 w-16 bg-gray-300/50 animate-pulse rounded-lg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -1,11 +1,12 @@
 import TextStyles from "@/utils/textstyles";
-import ProjectCard from "@/components/projects/project-card";
+import ProjectCard, { CardFallback } from "@/components/projects/project-card";
 import { twMerge } from "tailwind-merge";
 import db from "@/db";
 import { SelectProjects } from "@/db/schema/projects";
 import textstyles from "@/utils/textstyles";
 import { siteConfig } from "@/siteconfig";
 import { Resume, ResumeLink } from "@/components/about/resume";
+import { Suspense } from "react";
 
 // fixes prerender Error
 export const dynamic = "force-dynamic";
@@ -29,9 +30,7 @@ export default async function Projects() {
         }
       >
         <div className={twMerge("max-w-[600px] justify-center mx-auto w-full")}>
-          <div className={twMerge(textstyles.Elevated, "!text-2xl")}>
-            Projects
-          </div>
+          <div className={twMerge(textstyles.SerifHeader)}>Projects</div>
           <div className={twMerge(textstyles.BigHint)}>
             {siteConfig.pages.projects.text}
           </div>
@@ -45,7 +44,9 @@ export default async function Projects() {
       >
         <div className={twMerge("max-w-[600px] justify-center mx-auto w-full")}>
           {sortedProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <Suspense fallback={<CardFallback />} key={project.id}>
+              <ProjectCard key={project.id} project={project} />
+            </Suspense>
           ))}
         </div>
       </div>

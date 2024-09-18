@@ -1,7 +1,12 @@
 import localFont from "next/font/local";
 import { twMerge } from "tailwind-merge";
+
 const fornire = localFont({
   src: "../../src/assets/fonts/fornire-light.woff2",
+});
+
+const montreal = localFont({
+  src: "../../src/assets/fonts/montreal.woff",
 });
 
 const TextStyles = {
@@ -21,13 +26,17 @@ const TextStyles = {
   Text: "font-sans text-base sm:text-[0.875rem] text-black dark:text-white",
   BigText:
     "font-sans text-md md:text-xl text-black dark:text-white leading-tighter",
+  SerifHeader: twMerge(
+    montreal.className,
+    "text-2xl md:text-2xl dark:text-white text-darkgrey leading-tighter mb-2",
+  ),
   Elevated:
-    "font-playfare text-xl md:text-xl dark:text-white text-darkgrey leading-tighter mb-2",
+    "font-playfare font-bold text-lg md:text-lg dark:text-white text-darkgrey leading-tighter mb-2",
   BigTag: "font-sans text-[0.9375rem] dark:text-white text-black",
   Tag: "font-sans text-xs text-darkgrey dark:text-grey",
   LinkText: twMerge(
     fornire.className,
-    "font-playfare font-light text-xl text-darkgrey dark:text-white hover:underline hover:decoration-1",
+    "font-light text-2xl text-darkgrey dark:text-white hover:underline hover:decoration-1",
   ),
   BigHint:
     "font-sans font-extralight text-[1.0625rem] text-darkgrey dark:text-white",

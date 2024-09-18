@@ -3,15 +3,8 @@ import Textstyles from "@/utils/textstyles";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/theme-toggle";
-import { MobileHeader } from "@/components/header/mobile-header";
 import { twMerge } from "tailwind-merge";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
-import favicon from "@/assets/favicon.png";
-import faviconWhite from "@/assets/faviconWhite.png";
-import localFont from "next/font/local";
-
-const fornire = localFont({ src: "../../assets/fonts/fornire-light.woff2" });
 
 export default function Header() {
   const currentPath = usePathname();
@@ -31,7 +24,6 @@ export default function Header() {
                 <p
                   className={twMerge(
                     Textstyles.LinkText,
-                    fornire.className,
                     currentPath === "/"
                       ? "!underline decoration-secondary decoration-1"
                       : "",
@@ -46,7 +38,6 @@ export default function Header() {
                 <p
                   className={twMerge(
                     Textstyles.LinkText,
-                    fornire.className,
                     currentPath === "/about"
                       ? "!underline decoration-secondary decoration-1"
                       : "",
@@ -61,7 +52,6 @@ export default function Header() {
                 <p
                   className={twMerge(
                     Textstyles.LinkText,
-                    fornire.className,
                     currentPath === "/projects"
                       ? "!underline decoration-secondary decoration-1"
                       : "",
@@ -76,7 +66,6 @@ export default function Header() {
                 <p
                   className={twMerge(
                     Textstyles.LinkText,
-                    fornire.className,
                     currentPath === "/photos"
                       ? "!underline decoration-secondary decoration-1"
                       : "",
@@ -96,7 +85,6 @@ export default function Header() {
                   <p
                     className={twMerge(
                       Textstyles.LinkText,
-                      fornire.className,
                       currentPath === "/"
                         ? "!underline decoration-secondary decoration-1"
                         : "",
@@ -111,7 +99,6 @@ export default function Header() {
                   <p
                     className={twMerge(
                       Textstyles.LinkText,
-                      fornire.className,
                       currentPath === "/about"
                         ? "!underline decoration-secondary decoration-1"
                         : "",
@@ -126,7 +113,6 @@ export default function Header() {
                   <p
                     className={twMerge(
                       Textstyles.LinkText,
-                      fornire.className,
                       currentPath === "/projects"
                         ? "!underline decoration-secondary decoration-1"
                         : "",
@@ -141,7 +127,6 @@ export default function Header() {
                   <p
                     className={twMerge(
                       Textstyles.LinkText,
-                      fornire.className,
                       currentPath === "/photos"
                         ? "!underline decoration-secondary decoration-1"
                         : "",

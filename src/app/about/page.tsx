@@ -5,6 +5,8 @@ import db from "@/db";
 import textstyles from "@/utils/textstyles";
 import { siteConfig } from "@/siteconfig";
 import { Resume, ResumeLink } from "@/components/about/resume";
+import { Suspense } from "react";
+import { CardFallback } from "@/components/projects/project-card";
 
 // fixes prerender Error
 export const dynamic = "force-dynamic";
@@ -25,7 +27,7 @@ export default async function About() {
         }
       >
         <div className={twMerge("max-w-[600px] justify-center mx-auto w-full")}>
-          <div className={twMerge(textstyles.Elevated, "!text-2xl")}>About</div>
+          <div className={twMerge(textstyles.SerifHeader)}>About</div>
           <div className={twMerge(textstyles.BigHint)}>
             {siteConfig.pages.about.text}
           </div>
@@ -39,7 +41,9 @@ export default async function About() {
       >
         <div className={twMerge("max-w-[600px] justify-center mx-auto w-full")}>
           {experiences.map((experience) => (
-            <ExperienceCard key={experience.id} experience={experience} />
+            <Suspense fallback={<CardFallback />} key={experience.id}>
+              <ExperienceCard key={experience.id} experience={experience} />
+            </Suspense>
           ))}
         </div>
       </div>
