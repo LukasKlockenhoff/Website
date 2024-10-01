@@ -156,6 +156,20 @@ module.exports = {
       lineHeight: {
         tighter: "1.1",
       },
+      dropShadow: {
+        glow: [
+          "0 0px 100px rgba(255,255, 255, 0.99)",
+          "0 0px 65px rgba(255,255, 255, 0.80)",
+          "0 0px 80px rgba(255,255, 255, 0.75)",
+          "0 0px 150px rgba(255, 255,255, 0.50)",
+        ],
+        orangeGlow: [
+          "0 0px 65px rgba(253, 183, 112, 0.99)",
+          "0 0px 80px rgba(253, 183, 112, 0.80)",
+          "0 0px 100px rgba(253, 183, 112, 0.75)",
+          "0 0px 150px rgba(253, 183, 112, 0.50)",
+        ],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

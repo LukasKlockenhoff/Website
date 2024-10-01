@@ -6,77 +6,33 @@ import { ModeToggle } from "@/components/ui/theme-toggle";
 import { twMerge } from "tailwind-merge";
 import { usePathname } from "next/navigation";
 
-export default function Header() {
+interface HeaderProps {
+  links: PageLink[];
+}
+
+export default function Header({ links }: HeaderProps) {
   const currentPath = usePathname();
   return (
-    <div className={"w-full dark:bg-background bg-white mx-auto"}>
-      <div className={"dark:hidden block blur"}></div>
-      <div className={"hidden dark:block dark-blur"}></div>
+    <div className={"w-full mx-auto sticky top-0 z-10 backdrop-blur-lg"}>
       <div
         className={
-          "flex py-10 w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] items-center justify-between mx-auto"
+          "flex max-w-[600px] max-h-fit py-4 w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] items-center mx-auto gap-x-6"
         }
       >
-        <div className={"w-1/3 flex"}>
-          <div className={"flex w-2/3 gap-x-4 lg:gap-x-0"}>
-            <Button asChild variant={"ghost"} className={"w-1/2"}>
-              <Link href={"/"}>
-                <p
-                  className={twMerge(
-                    Textstyles.LinkText,
-                    currentPath === "/"
-                      ? "!underline decoration-secondary decoration-1"
-                      : "",
-                  )}
-                >
-                  Home
-                </p>
-              </Link>
-            </Button>
-            <Button asChild variant={"ghost"} className={"w-1/2"}>
-              <Link href={"/about"}>
-                <p
-                  className={twMerge(
-                    Textstyles.LinkText,
-                    currentPath === "/about"
-                      ? "!underline decoration-secondary decoration-1"
-                      : "",
-                  )}
-                >
-                  About
-                </p>
-              </Link>
-            </Button>
-            <Button asChild variant={"ghost"} className={"w-1/2"}>
-              <Link href={"/projects"}>
-                <p
-                  className={twMerge(
-                    Textstyles.LinkText,
-                    currentPath === "/projects"
-                      ? "!underline decoration-secondary decoration-1"
-                      : "",
-                  )}
-                >
-                  Projects
-                </p>
-              </Link>
-            </Button>
-            <Button asChild variant={"ghost"} className={"w-1/2"}>
-              <Link href={"/photos"}>
-                <p
-                  className={twMerge(
-                    Textstyles.LinkText,
-                    currentPath === "/photos"
-                      ? "!underline decoration-secondary decoration-1"
-                      : "",
-                  )}
-                >
-                  Photos
-                </p>
-              </Link>
-            </Button>
-          </div>
-        </div>
+        {links.map((link) => (
+          <Link href={link.url} key={link.title}>
+            <p
+              className={twMerge(
+                Textstyles.LinkText,
+                currentPath === link.url
+                  ? "!underline decoration-secondary decoration-1"
+                  : "",
+              )}
+            >
+              {link.title}
+            </p>
+          </Link>
+        ))}
         <ModeToggle />
       </div>
     </div>

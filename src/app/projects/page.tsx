@@ -39,7 +39,7 @@ export default async function Projects() {
       </div>
       <div
         className={
-          "w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] mx-auto flex flex-col justify-center"
+          "w-full sm:w-2/3 2xl:w-2/3 xl:w-[80%] mx-auto flex flex-col justify-center"
         }
       >
         <div className={twMerge("max-w-[600px] justify-center mx-auto w-full")}>

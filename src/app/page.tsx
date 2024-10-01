@@ -39,7 +39,7 @@ export default function Home() {
           "w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] mx-auto flex flex-col justify-center my-3"
         }
       >
-        <div className={twMerge("max-w-[650px] justify-center mx-auto w-full")}>
+        <div className={twMerge("max-w-[600px] justify-center mx-auto w-full")}>
           <div
             className={twMerge(
               textstyles.Elevated,

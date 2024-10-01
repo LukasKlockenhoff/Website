@@ -47,24 +47,62 @@ export const siteConfig = {
     about: {
       title: "About",
       link: "/about",
-      text: "I have been a lover of technology and science since I can remember. \
-            Computer Science and the art of solving problems with code is my \
-            passion. Below you can find my professional experience and my \
-            education - a list that I am constantly working on expanding.",
+      text: (
+        <div>
+          I have been a lover of technology and science since I can remember. \
+          Computer Science and the art of solving problems with code is my \
+          passion. Below you can find my professional experience and my \
+          education - a list that I am constantly working on expanding.
+        </div>
+      ),
     },
     projects: {
       title: "Projects",
       link: "/projects",
-      text: "Next to my studies, I am developing personal projects to improve my \
-            programming, design, and architecture skills. Here are some of them \
-            and the technologies I used. You can find the code on my GitHub via \
-            the provided link.",
+      text: (
+        <div>
+          Next to my studies, I am developing personal projects to improve my \
+          programming, design, and architecture skills. Here are some of them \
+          and the technologies I used. You can find the code on my GitHub via \
+          the provided link.
+        </div>
+      ),
     },
-    photos: {
-      title: "Photos",
-      link: "/photos",
-      text: "",
+    gallery: {
+      title: "Gallery",
+      link: "/gallery",
+      text: <div></div>,
     },
+  },
+  links: {
+    footer: [
+      {
+        title: "Contact",
+        url: "mailto:l@lukaskl.com",
+      },
+      {
+        title: "Legal",
+        url: "/legal",
+      },
+    ],
+    header: [
+      {
+        title: "Home",
+        url: "/",
+      },
+      {
+        title: "About",
+        url: "/about",
+      },
+      {
+        title: "Projects",
+        url: "/projects",
+      },
+      {
+        title: "Gallery",
+        url: "/gallery",
+      },
+    ],
   },
 };
 

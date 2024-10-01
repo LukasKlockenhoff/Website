@@ -38,19 +38,6 @@ interface PhotoProps {
   url: StaticImport;
 }
 
-const Photo = ({ url }: PhotoProps) => {
-  return (
-    <div className="w-full h-full">
-      <Image
-        src={"/gallery/P001.png"}
-        fill={true}
-        alt="Picture of the author"
-        placeholder="blur"
-      />
-    </div>
-  );
-};
-
 const photos = [
   P010,
   P011,
