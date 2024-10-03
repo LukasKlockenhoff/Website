@@ -15,7 +15,7 @@ const lorem = new LoremIpsum({
   },
 });
 
-export default function NotFound() {
+export default function Page() {
   return (
     <div
       className={
