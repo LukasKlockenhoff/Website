@@ -103,7 +103,7 @@ export default function RootLayout({
               className={twMerge(
                 "mt-10",
                 title === "Lukas Klockenhoff" && location != "/"
-                  ? "lg:!cursor-none"
+                  ? "!cursor-none"
                   : "",
               )}
             >

@@ -1,17 +1,5 @@
 import { pages } from "next/dist/build/templates/app-page";
 import Link from "next/link";
-import { LoremIpsum } from "lorem-ipsum";
-
-const lorem = new LoremIpsum({
-  sentencesPerParagraph: {
-    max: 8,
-    min: 4,
-  },
-  wordsPerSentence: {
-    max: 16,
-    min: 4,
-  },
-});
 
 const birthdate = new Date("2004-08-07");
 const today = new Date();
@@ -84,10 +72,6 @@ export const siteConfig = {
       title: "Gallery",
       link: "/gallery",
       text: <div></div>,
-    },
-    notFound: {
-      title: "Not Found",
-      text: <div>{lorem.generateParagraphs(7)}</div>,
     },
   },
   links: {

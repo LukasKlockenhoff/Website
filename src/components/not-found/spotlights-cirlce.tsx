@@ -26,7 +26,7 @@ export function SpotlightCirlce({ position }: SpotlightCirlceProps) {
     return (
       <div
         className={twMerge(
-          "fixed lg:hidden w-60 h-60 rounded-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-90% to-10% from-secondary to-secondary/80 blur-3xl top-32 left-0",
+          "fixed md:hidden w-60 h-60 sm:w-80 sm:h-80 rounded-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-90% to-10% from-secondary to-secondary/80 blur-3xl top-32 left-0",
         )}
       />
     );
@@ -35,7 +35,7 @@ export function SpotlightCirlce({ position }: SpotlightCirlceProps) {
   return (
     <div
       className={twMerge(
-        "hidden lg:block z-0 absolute w-36 h-36 rounded-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-90% to-10% from-secondary to-secondary/80 blur-3xl lg:!cursor-none",
+        "hidden md:block z-0 absolute w-36 h-36 rounded-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-90% to-10% from-secondary to-secondary/80 blur-3xl md:!cursor-none",
       )}
       style={{
         top: `${mouseY - 144 / 2}px`,
