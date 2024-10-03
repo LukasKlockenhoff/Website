@@ -3,43 +3,44 @@
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-interface SpotlightCirlceProps {
+interface SpotlightCircleProps {
   position: "absolute" | "fixed";
 }
 
-export function SpotlightCirlce({ position }: SpotlightCirlceProps) {
+export default function SpotlightCircle({ position }: SpotlightCircleProps) {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
-
-  const handleMouseMove = (e: MouseEvent) => {
-    setMouseX(e.clientX);
-    setMouseY(e.clientY);
-  };
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+    const handleMouseMove = (e: MouseEvent) => {
+      setMouseX(e.clientX);
+      setMouseY(e.clientY);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    // Log to console for debugging
+    console.log("SpotlightCircle mounted, event listener added");
+
     return () => {
-      document.addEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
+      console.log("SpotlightCircle unmounted, event listener removed");
     };
   }, []);
 
-  if (position === "fixed") {
-    return (
-      <div
-        className={twMerge(
-          "fixed md:hidden w-60 h-60 sm:w-80 sm:h-80 rounded-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-90% to-10% from-secondary to-secondary/80 blur-3xl top-32 left-0",
-        )}
-      />
-    );
+  if (!isClient) {
+    return null; // or a loading placeholder
   }
-
   return (
     <div
       className={twMerge(
         "hidden md:block z-0 absolute w-36 h-36 rounded-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-90% to-10% from-secondary to-secondary/80 blur-3xl md:!cursor-none",
       )}
       style={{
-        top: `${mouseY - 144 / 2}px`,
-        left: `${mouseX - 144 / 2}px`,
+        top: `${mouseY - 72}px`,
+        left: `${mouseX - 72}px`,
       }}
     />
   );

@@ -1,22 +1,15 @@
-"use client";
-
+import { Suspense } from "react";
 import { twMerge } from "tailwind-merge";
 import Textstyles from "@/utils/textstyles";
-import { SpotlightCirlce } from "@/components/not-found/spotlights-cirlce";
+import dynamic from "next/dynamic";
+import SpotlightsBackground from "@/components/not-found/spotlights-background";
 
-import { LoremIpsum } from "lorem-ipsum";
-import { useState } from "react";
-
-const lorem = new LoremIpsum({
-  sentencesPerParagraph: {
-    max: 8,
-    min: 4,
+const DynamicSpotlightCircle = dynamic(
+  () => import("@/components/not-found/spotlights-cirlce"),
+  {
+    ssr: false,
   },
-  wordsPerSentence: {
-    max: 16,
-    min: 4,
-  },
-});
+);
 
 const text =
   "Enim occaecat pariatur officia ad duis mollit pariatur magna esse culpa tempor proident. Sunt aliqua dolore ex eiusmod do id aliqua laboris exercitation reprehenderit ea cupidatat non. Ea labore ea ad cillum velit duis cillum. Aute enim cupidatat laborum veniam tempor occaecat exercitation in pariatur commodo cupidatat. \
@@ -29,20 +22,14 @@ Duis aute pariatur laborum reprehenderit veniam ea ut quis nostrud consequat mag
 
 export default function Page() {
   return (
-    <div
-      className={
-        "w-full h-full justify-center dark:bg-background bg-white overflow-x-clip !cursor-none"
-      }
-    >
-      <div
-        className={
-          "w-[90%] h-full sm:w-2/3 2xl:w-2/3 xl:w-[80%] mx-auto flex flex-col justify-center my-3 !cursor-none relative"
-        }
-      >
-        <SpotlightCirlce position="fixed" />
+    <div className="w-full h-full justify-center dark:bg-background bg-white overflow-x-clip">
+      <div className="w-[90%] h-full sm:w-2/3 2xl:w-2/3 xl:w-[80%] mx-auto flex flex-col justify-center my-3 relative">
+        <Suspense fallback={<div>Loading...</div>}>
+          <SpotlightsBackground />
+        </Suspense>
         <div
           className={twMerge(
-            "max-w-[600px] justify-center mx-auto w-full !cursor-none select-none z-10",
+            "max-w-[600px] justify-center mx-auto w-full select-none z-10",
           )}
         >
           <div
@@ -51,7 +38,7 @@ export default function Page() {
               "!text-white dark:!text-background",
             )}
           >
-            This page does not exists (yet)
+            This page does not exist (yet)
           </div>
           <div
             className={twMerge(
@@ -63,7 +50,9 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <SpotlightCirlce position="absolute" />
+      <Suspense fallback={<div>Loading...</div>}>
+        <DynamicSpotlightCircle position="absolute" />
+      </Suspense>
     </div>
   );
 }
