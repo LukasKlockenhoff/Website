@@ -37,8 +37,6 @@ export default function RootLayout({
       ? "Projects"
       : location === "/legal"
       ? "Legal"
-      : location === "/contact"
-      ? "Contact"
       : location === "/gallery"
       ? "Gallery"
       : "Lukas Klockenhoff";
@@ -101,7 +99,16 @@ export default function RootLayout({
         >
           <main className="flex flex-col h-full min-h-screen w-full pb-20 bg-white dark:bg-background font-sans overflow-x-clip">
             <Header links={siteConfig.links.header} />
-            <div className="mt-10">{children}</div>
+            <div
+              className={twMerge(
+                "mt-10",
+                title === "Lukas Klockenhoff" && location != "/"
+                  ? "lg:!cursor-none"
+                  : "",
+              )}
+            >
+              {children}
+            </div>
           </main>
           <Footer />
         </ThemeProvider>

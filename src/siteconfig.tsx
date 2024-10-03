@@ -1,5 +1,17 @@
 import { pages } from "next/dist/build/templates/app-page";
 import Link from "next/link";
+import { LoremIpsum } from "lorem-ipsum";
+
+const lorem = new LoremIpsum({
+  sentencesPerParagraph: {
+    max: 8,
+    min: 4,
+  },
+  wordsPerSentence: {
+    max: 16,
+    min: 4,
+  },
+});
 
 const birthdate = new Date("2004-08-07");
 const today = new Date();
@@ -49,9 +61,9 @@ export const siteConfig = {
       link: "/about",
       text: (
         <div>
-          I have been a lover of technology and science since I can remember. \
-          Computer Science and the art of solving problems with code is my \
-          passion. Below you can find my professional experience and my \
+          I have been a lover of technology and science since I can remember.
+          Computer Science and the art of solving problems with code is my
+          passion. Below you can find my professional experience and my
           education - a list that I am constantly working on expanding.
         </div>
       ),
@@ -61,9 +73,9 @@ export const siteConfig = {
       link: "/projects",
       text: (
         <div>
-          Next to my studies, I am developing personal projects to improve my \
-          programming, design, and architecture skills. Here are some of them \
-          and the technologies I used. You can find the code on my GitHub via \
+          Next to my studies, I am developing personal projects to improve my
+          programming, design, and architecture skills. Here are some of them
+          and the technologies I used. You can find the code on my GitHub via
           the provided link.
         </div>
       ),
@@ -72,6 +84,10 @@ export const siteConfig = {
       title: "Gallery",
       link: "/gallery",
       text: <div></div>,
+    },
+    notFound: {
+      title: "Not Found",
+      text: <div>{lorem.generateParagraphs(7)}</div>,
     },
   },
   links: {

@@ -13,7 +13,7 @@ interface HeaderProps {
 export default function Header({ links }: HeaderProps) {
   const currentPath = usePathname();
   return (
-    <div className={"w-full mx-auto sticky top-0 z-10 backdrop-blur-lg"}>
+    <div className={"w-full mx-auto sticky top-0 z-30 backdrop-blur-lg"}>
       <div
         className={
           "flex max-w-[600px] max-h-fit py-4 w-[90%] sm:w-2/3 2xl:w-2/3 xl:w-[80%] items-center mx-auto gap-x-6"
