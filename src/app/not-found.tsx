@@ -5,6 +5,10 @@ import { SpotlightCirlce } from "@/components/not-found/spotlights-cirlce";
 
 import { LoremIpsum } from "lorem-ipsum";
 
+// fixes prerender Error
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {
     max: 8,
